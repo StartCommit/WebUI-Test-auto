@@ -7,15 +7,19 @@ driver = webdriver.Chrome(service=Service(r"D:\chromedriver-win64\chromedriver.e
 
 # 打开网页
 driver.get("http://localhost/ecshop/user.php?act=register")
+
 # id元素定位
 # driver.find_element(By.ID, "username").send_keys("用户名")
 # sleep(5)
+
 # name元素定位
 # driver.find_element(By.NAME, "email").send_keys("邮箱")
 # sleep(5)
+
 # class_name元素定位
 # driver.find_element(By.CLASS_NAME, "inputBg")#可能会重复
 # sleep(5)
+
 # tag_name元素定位
 # driver.find_element(By.TAG_NAME, "input")#可能会重复
 # sleep(5)
@@ -32,6 +36,10 @@ driver.get("http://localhost/ecshop/user.php?act=register")
 
 # 4）属性选择器   [属性名="属性值"]
 # driver.find_element(By.CSS_SELECTOR, "[name='email']").send_keys("邮箱") # 单个属性定位
+
 # driver.find_element(By.CSS_SELECTOR, "[name='email'][type='text']").send_keys("邮箱")  # 多属性定位
-driver.find_element(By.CSS_SELECTOR, "input[name='extend_field1']").send_keys("MSN") # 属性值包含
+
+# driver.find_element(By.CSS_SELECTOR, "input[name='extend_field1']").send_keys("MSN") # 属性值包含
+
+driver.find_element(By.CSS_SELECTOR, "input#username").send_keys("用户名")  # 标签名+id属性
 sleep(3)
