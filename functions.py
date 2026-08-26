@@ -44,7 +44,7 @@ driver.get("https://leafground.com/radio.xhtml")
 driver.find_element(By.XPATH, '//*[@id="j_idt87:console1"]/tbody/tr/td[4]/label').click()
 
 # # 滑动条
-driver.get("https://leafground.com/input.xhtml")
+
 sleep(2)
 # 定位滑块元素
 slider = driver.find_element(By.ID, 'j_idt106:j_idt120')
