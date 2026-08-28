@@ -13,7 +13,6 @@ driver.get("https://leafground.com/input.xhtml")
 driver.maximize_window()
 sleep(2)
 
-
 # 模拟键盘的操作
 # 定位到多行文本框元素
 line_element = driver.find_element(By.ID, "j_idt88:j_idt101")
