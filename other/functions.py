@@ -83,5 +83,4 @@ driver.find_element(By.XPATH, '//*[@id="j_idt106:j_idt116_panel"]/div/div[2]/tab
 #  页面截图
 driver.get_screenshot_as_file("screenshot.png")
 
-
 sleep(3)
