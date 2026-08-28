@@ -5,7 +5,6 @@ from selenium.webdriver.common.by import By
 
 # 指定存放 chromedriver.exe 的绝对路径（注意要用双斜杠或者 r 前缀）
 driver = webdriver.Chrome(service=Service(r"D:\chromedriver-win64\chromedriver.exe"))
-
 # 切换成edge浏览器
 # driver = webdriver.Edge()
 
