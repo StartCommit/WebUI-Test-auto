@@ -32,5 +32,4 @@ driver.implicitly_wait(10)  # 设置隐式等待时间10秒
 driver.find_element(By.ID, "j_idt87:country_label").click()
 driver.find_element(By.XPATH, 'j_idt87:city_label').click()
 
-
 sleep(2)
