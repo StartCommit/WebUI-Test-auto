@@ -43,7 +43,7 @@ alert.accept()
 driver.get("https://leafground.com/radio.xhtml")
 driver.find_element(By.XPATH, '//*[@id="j_idt87:console1"]/tbody/tr/td[4]/label').click()
 
-# # 滑动条
+# 滑动条
 
 sleep(2)
 # 定位滑块元素
