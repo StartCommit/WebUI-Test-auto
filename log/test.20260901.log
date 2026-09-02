@@ -1,0 +1,13 @@
+INFO - 2026-09-01 20:01:34,653 - recordlog.py:60 - [recordlog:<module>] - 这是info级别日志
+ERROR - 2026-09-01 20:01:34,653 - recordlog.py:61 - [recordlog:<module>] - 这是error级别日志
+WARNING - 2026-09-01 20:01:34,653 - recordlog.py:62 - [recordlog:<module>] - 这是warning级别日志
+DEBUG - 2026-09-01 20:01:34,654 - recordlog.py:63 - [recordlog:<module>] - 这是debug级别日志
+CRITICAL - 2026-09-01 20:01:34,654 - recordlog.py:64 - [recordlog:<module>] - 这是critical级别日志
+INFO - 2026-09-01 20:01:45,162 - basePage.py:88 - [basePage:location_element] - 找到元素：xpath=//*[@id="j_idt88:j_idt93"]/span[2]
+INFO - 2026-09-01 20:27:57,210 - recordlog.py:60 - [recordlog:<module>] - 这是info级别日志
+ERROR - 2026-09-01 20:27:57,211 - recordlog.py:61 - [recordlog:<module>] - 这是error级别日志
+WARNING - 2026-09-01 20:27:57,212 - recordlog.py:62 - [recordlog:<module>] - 这是warning级别日志
+DEBUG - 2026-09-01 20:27:57,212 - recordlog.py:63 - [recordlog:<module>] - 这是debug级别日志
+CRITICAL - 2026-09-01 20:27:57,213 - recordlog.py:64 - [recordlog:<module>] - 这是critical级别日志
+INFO - 2026-09-01 20:28:06,569 - basePage.py:88 - [basePage:location_element] - 找到元素：xpath=//*[@id="j_idt88:j_idt93"]/span[2]
+INFO - 2026-09-01 20:29:36,116 - basePage.py:88 - [basePage:location_element] - 找到元素：xpath=//*[@id="j_idt88:j_idt93"]/span[2]

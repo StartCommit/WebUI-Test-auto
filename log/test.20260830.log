@@ -1,0 +1,5 @@
+INFO - 2026-08-30 17:52:53,737 - recordlog.py:60 - [recordlog:<module>] - 这是info级别日志
+ERROR - 2026-08-30 17:52:53,738 - recordlog.py:61 - [recordlog:<module>] - 这是error级别日志
+WARNING - 2026-08-30 17:52:53,738 - recordlog.py:62 - [recordlog:<module>] - 这是warning级别日志
+DEBUG - 2026-08-30 17:52:53,739 - recordlog.py:63 - [recordlog:<module>] - 这是debug级别日志
+CRITICAL - 2026-08-30 17:52:53,739 - recordlog.py:64 - [recordlog:<module>] - 这是critical级别日志

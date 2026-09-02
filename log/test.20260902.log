@@ -1,0 +1,79 @@
+INFO - 2026-09-02 18:03:44,100 - basePage.py:90 - [basePage:location_element] - 找到元素：xpath=//*[@id="j_idt88:j_idt93"]/span[2]
+INFO - 2026-09-02 18:06:21,946 - basePage.py:90 - [basePage:location_element] - 找到元素：xpath=//*[@id="j_idt88:j_idt93"]/span[2]
+INFO - 2026-09-02 18:07:33,746 - basePage.py:90 - [basePage:location_element] - 找到元素：xpath=//*[@id="j_idt88:j_idt93"]/span[2]
+INFO - 2026-09-02 18:07:33,767 - basePage.py:109 - [basePage:click] - 元素点击：('xpath', '//*[@id="j_idt88:j_idt93"]/span[2]')
+INFO - 2026-09-02 18:07:51,397 - basePage.py:90 - [basePage:location_element] - 找到元素：xpath=//*[@id="j_idt88:j_idt93"]/span[2]
+INFO - 2026-09-02 18:07:51,411 - basePage.py:109 - [basePage:click] - 元素点击：('xpath', '//*[@id="j_idt88:j_idt93"]/span[2]')
+INFO - 2026-09-02 18:10:40,109 - basePage.py:90 - [basePage:location_element] - 找到元素：xpath=//*[@id="j_idt88:j_idt93"]/span[2]
+INFO - 2026-09-02 18:10:40,123 - basePage.py:109 - [basePage:click] - 元素点击：('xpath', '//*[@id="j_idt88:j_idt93"]/span[2]')
+INFO - 2026-09-02 18:22:47,937 - basePage.py:90 - [basePage:location_element] - 找到元素：id=j_idt88:j_idt91
+INFO - 2026-09-02 18:23:38,903 - basePage.py:90 - [basePage:location_element] - 找到元素：id=j_idt88:j_idt91
+INFO - 2026-09-02 18:23:38,968 - basePage.py:124 - [basePage:send_keys] - 元素被输入内容：('id', 'j_idt88:j_idt91'),输入的内容是hello
+INFO - 2026-09-02 18:23:38,979 - basePage.py:90 - [basePage:location_element] - 找到元素：id=j_idt88:name
+INFO - 2026-09-02 18:23:39,049 - basePage.py:124 - [basePage:send_keys] - 元素被输入内容：('id', 'j_idt88:name'),输入的内容是输入内容定位
+INFO - 2026-09-02 18:24:39,657 - basePage.py:90 - [basePage:location_element] - 找到元素：id=j_idt88:j_idt91
+INFO - 2026-09-02 18:24:39,716 - basePage.py:124 - [basePage:send_keys] - 元素被输入内容：('id', 'j_idt88:j_idt91'),输入的内容是：hello
+INFO - 2026-09-02 18:24:39,732 - basePage.py:90 - [basePage:location_element] - 找到元素：id=j_idt88:name
+INFO - 2026-09-02 18:24:39,793 - basePage.py:124 - [basePage:send_keys] - 元素被输入内容：('id', 'j_idt88:name'),输入的内容是：输入内容定位
+INFO - 2026-09-02 18:27:18,981 - basePage.py:90 - [basePage:location_element] - 找到元素：id=j_idt88:name
+INFO - 2026-09-02 18:27:19,048 - basePage.py:124 - [basePage:send_keys] - 元素被输入内容：('id', 'j_idt88:name'),输入的内容是：输入内容定位
+ERROR - 2026-09-02 18:59:54,302 - basePage.py:109 - [basePage:location_elements] - 未找到元素列表：xpath=j//*[@id="j_idt88_content"]/div
+INFO - 2026-09-02 19:00:48,652 - basePage.py:106 - [basePage:location_elements] - 找到元素列表：xpath=//*[@id="j_idt88_content"]/div
+INFO - 2026-09-02 19:08:43,762 - basePage.py:92 - [basePage:location_element] - 找到元素：id=j_idt88:j_idt101
+INFO - 2026-09-02 19:08:43,815 - basePage.py:142 - [basePage:send_keys] - 元素被输入内容：('id', 'j_idt88:j_idt101'),输入的内容是：第一行
+INFO - 2026-09-02 19:08:43,827 - basePage.py:151 - [basePage:enter] - 按下回车键
+INFO - 2026-09-02 19:08:43,834 - basePage.py:92 - [basePage:location_element] - 找到元素：id=j_idt88:j_idt101
+INFO - 2026-09-02 19:08:43,864 - basePage.py:142 - [basePage:send_keys] - 元素被输入内容：('id', 'j_idt88:j_idt101'),输入的内容是：第二行
+INFO - 2026-09-02 19:43:00,216 - basePage.py:92 - [basePage:location_element] - 找到元素：id=j_idt88:j_idt101
+INFO - 2026-09-02 19:43:00,323 - basePage.py:156 - [basePage:send_keys] - 元素被输入内容：('id', 'j_idt88:j_idt101'),输入的内容是：第一行
+INFO - 2026-09-02 19:43:00,337 - basePage.py:165 - [basePage:enter] - 按下回车键
+INFO - 2026-09-02 19:43:00,345 - basePage.py:92 - [basePage:location_element] - 找到元素：id=j_idt88:j_idt101
+INFO - 2026-09-02 19:43:00,379 - basePage.py:156 - [basePage:send_keys] - 元素被输入内容：('id', 'j_idt88:j_idt101'),输入的内容是：第二行
+INFO - 2026-09-02 19:43:00,391 - basePage.py:92 - [basePage:location_element] - 找到元素：id=j_idt88:j_idt101
+INFO - 2026-09-02 19:43:00,680 - basePage.py:141 - [basePage:right_click] - 执行右键点击操作：('id', 'j_idt88:j_idt101')
+INFO - 2026-09-02 19:54:30,888 - basePage.py:93 - [basePage:location_element] - 找到元素：id=j_idt88:j_idt101
+INFO - 2026-09-02 19:54:30,957 - basePage.py:143 - [basePage:send_keys] - 元素被输入内容：('id', 'j_idt88:j_idt101'),输入的内容是：第一行
+INFO - 2026-09-02 19:54:30,970 - basePage.py:152 - [basePage:enter] - 按下回车键
+INFO - 2026-09-02 19:54:30,977 - basePage.py:93 - [basePage:location_element] - 找到元素：id=j_idt88:j_idt101
+INFO - 2026-09-02 19:54:31,011 - basePage.py:143 - [basePage:send_keys] - 元素被输入内容：('id', 'j_idt88:j_idt101'),输入的内容是：第二行
+INFO - 2026-09-02 19:54:31,018 - basePage.py:93 - [basePage:location_element] - 找到元素：id=j_idt88:j_idt101
+INFO - 2026-09-02 19:54:31,310 - basePage.py:166 - [basePage:right_click] - 执行右键点击操作：('id', 'j_idt88:j_idt101')
+INFO - 2026-09-02 19:57:33,002 - basePage.py:93 - [basePage:location_element] - 找到元素：id=j_idt88:j_idt101
+INFO - 2026-09-02 19:57:33,068 - basePage.py:143 - [basePage:send_keys] - 元素被输入内容：('id', 'j_idt88:j_idt101'),输入的内容是：第一行
+INFO - 2026-09-02 19:57:33,081 - basePage.py:152 - [basePage:enter] - 按下回车键
+INFO - 2026-09-02 19:57:33,088 - basePage.py:93 - [basePage:location_element] - 找到元素：id=j_idt88:j_idt101
+INFO - 2026-09-02 19:57:33,117 - basePage.py:143 - [basePage:send_keys] - 元素被输入内容：('id', 'j_idt88:j_idt101'),输入的内容是：第二行
+INFO - 2026-09-02 19:57:33,126 - basePage.py:93 - [basePage:location_element] - 找到元素：id=j_idt88:j_idt101
+INFO - 2026-09-02 19:57:33,400 - basePage.py:166 - [basePage:right_click] - 执行右键点击操作：('id', 'j_idt88:j_idt101')
+INFO - 2026-09-02 19:59:44,028 - basePage.py:93 - [basePage:location_element] - 找到元素：id=j_idt88:j_idt101
+INFO - 2026-09-02 19:59:44,095 - basePage.py:143 - [basePage:send_keys] - 元素被输入内容：('id', 'j_idt88:j_idt101'),输入的内容是：第一行
+INFO - 2026-09-02 19:59:44,105 - basePage.py:152 - [basePage:enter] - 按下回车键
+INFO - 2026-09-02 19:59:44,126 - basePage.py:93 - [basePage:location_element] - 找到元素：id=j_idt88:j_idt101
+INFO - 2026-09-02 19:59:44,156 - basePage.py:143 - [basePage:send_keys] - 元素被输入内容：('id', 'j_idt88:j_idt101'),输入的内容是：第二行
+INFO - 2026-09-02 19:59:44,164 - basePage.py:93 - [basePage:location_element] - 找到元素：id=j_idt88:j_idt101
+INFO - 2026-09-02 19:59:44,453 - basePage.py:166 - [basePage:right_click] - 执行右键点击操作：('id', 'j_idt88:j_idt101')
+INFO - 2026-09-02 20:01:25,426 - basePage.py:93 - [basePage:location_element] - 找到元素：id=j_idt88:j_idt101
+INFO - 2026-09-02 20:01:25,494 - basePage.py:143 - [basePage:send_keys] - 元素被输入内容：('id', 'j_idt88:j_idt101'),输入的内容是：第一行
+INFO - 2026-09-02 20:01:25,505 - basePage.py:152 - [basePage:enter] - 按下回车键
+INFO - 2026-09-02 20:01:25,512 - basePage.py:93 - [basePage:location_element] - 找到元素：id=j_idt88:j_idt101
+INFO - 2026-09-02 20:01:25,540 - basePage.py:143 - [basePage:send_keys] - 元素被输入内容：('id', 'j_idt88:j_idt101'),输入的内容是：第二行
+INFO - 2026-09-02 20:01:25,549 - basePage.py:93 - [basePage:location_element] - 找到元素：id=j_idt88:j_idt101
+INFO - 2026-09-02 20:01:25,834 - basePage.py:166 - [basePage:right_click] - 执行右键点击操作：('id', 'j_idt88:j_idt101')
+INFO - 2026-09-02 20:02:52,791 - basePage.py:94 - [basePage:location_element] - 找到元素：id=j_idt88:j_idt101
+INFO - 2026-09-02 20:02:52,852 - basePage.py:144 - [basePage:send_keys] - 元素被输入内容：('id', 'j_idt88:j_idt101'),输入的内容是：第一行
+INFO - 2026-09-02 20:02:52,862 - basePage.py:153 - [basePage:enter] - 按下回车键
+INFO - 2026-09-02 20:02:52,871 - basePage.py:94 - [basePage:location_element] - 找到元素：id=j_idt88:j_idt101
+INFO - 2026-09-02 20:02:52,898 - basePage.py:144 - [basePage:send_keys] - 元素被输入内容：('id', 'j_idt88:j_idt101'),输入的内容是：第二行
+INFO - 2026-09-02 20:02:52,906 - basePage.py:94 - [basePage:location_element] - 找到元素：id=j_idt88:j_idt101
+INFO - 2026-09-02 20:02:53,195 - basePage.py:167 - [basePage:right_click] - 执行右键点击操作：('id', 'j_idt88:j_idt101')
+INFO - 2026-09-02 20:02:53,304 - basePage.py:197 - [basePage:screenshots] - 截图成功：D:\Test\WEB\screenshot\多行文本-20260902200253.png
+INFO - 2026-09-02 20:06:51,750 - basePage.py:94 - [basePage:location_element] - 找到元素：id=j_idt88:j_idt101
+INFO - 2026-09-02 20:06:51,820 - basePage.py:144 - [basePage:send_keys] - 元素被输入内容：('id', 'j_idt88:j_idt101'),输入的内容是：第一行
+INFO - 2026-09-02 20:06:51,833 - basePage.py:153 - [basePage:enter] - 按下回车键
+INFO - 2026-09-02 20:06:51,838 - basePage.py:94 - [basePage:location_element] - 找到元素：id=j_idt88:j_idt101
+INFO - 2026-09-02 20:06:51,866 - basePage.py:144 - [basePage:send_keys] - 元素被输入内容：('id', 'j_idt88:j_idt101'),输入的内容是：第二行
+INFO - 2026-09-02 20:06:51,874 - basePage.py:94 - [basePage:location_element] - 找到元素：id=j_idt88:j_idt101
+INFO - 2026-09-02 20:06:51,906 - basePage.py:211 - [basePage:clear] - 清空文本
+INFO - 2026-09-02 20:06:51,937 - basePage.py:94 - [basePage:location_element] - 找到元素：id=j_idt88:j_idt101
+INFO - 2026-09-02 20:06:52,246 - basePage.py:167 - [basePage:right_click] - 执行右键点击操作：('id', 'j_idt88:j_idt101')
+INFO - 2026-09-02 20:06:52,365 - basePage.py:197 - [basePage:screenshots] - 截图成功,文件位置：D:\Test\WEB\screenshot\多行文本-20260902200652.png
