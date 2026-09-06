@@ -1,0 +1,29 @@
+INFO - 2026-09-04 17:33:40,742 - basePage.py:101 - [basePage:location_element] - 找到元素：xpath=/html/body/form/table/tbody/tr/td[2]/table/tbody/tr[4]/td/img
+INFO - 2026-09-04 17:33:41,452 - basePage.py:242 - [basePage:ocr_capture] - OCR识别成功：('xpath', '/html/body/form/table/tbody/tr/td[2]/table/tbody/tr[4]/td/img'),识别结果是：
+INFO - 2026-09-04 17:35:19,471 - basePage.py:101 - [basePage:location_element] - 找到元素：xpath=/html/body/form/table/tbody/tr/td[2]/table/tbody/tr[4]/td/img
+INFO - 2026-09-04 17:35:20,105 - basePage.py:242 - [basePage:ocr_capture] - OCR识别成功：('xpath', '/html/body/form/table/tbody/tr/td[2]/table/tbody/tr[4]/td/img'),识别结果是：>
+
+
+INFO - 2026-09-04 17:35:28,559 - basePage.py:101 - [basePage:location_element] - 找到元素：xpath=/html/body/form/table/tbody/tr/td[2]/table/tbody/tr[4]/td/img
+INFO - 2026-09-04 17:35:29,064 - basePage.py:242 - [basePage:ocr_capture] - OCR识别成功：('xpath', '/html/body/form/table/tbody/tr/td[2]/table/tbody/tr[4]/td/img'),识别结果是：Rey 9
+
+
+INFO - 2026-09-04 17:35:39,608 - basePage.py:101 - [basePage:location_element] - 找到元素：xpath=/html/body/form/table/tbody/tr/td[2]/table/tbody/tr[4]/td/img
+INFO - 2026-09-04 17:35:40,125 - basePage.py:242 - [basePage:ocr_capture] - OCR识别成功：('xpath', '/html/body/form/table/tbody/tr/td[2]/table/tbody/tr[4]/td/img'),识别结果是：56H)
+
+
+INFO - 2026-09-04 17:35:48,525 - basePage.py:101 - [basePage:location_element] - 找到元素：xpath=/html/body/form/table/tbody/tr/td[2]/table/tbody/tr[4]/td/img
+INFO - 2026-09-04 17:35:49,065 - basePage.py:242 - [basePage:ocr_capture] - OCR识别成功：('xpath', '/html/body/form/table/tbody/tr/td[2]/table/tbody/tr[4]/td/img'),识别结果是：csAs.
+
+
+INFO - 2026-09-04 17:36:20,732 - basePage.py:101 - [basePage:location_element] - 找到元素：xpath=/html/body/form/table/tbody/tr/td[2]/table/tbody/tr[4]/td/img
+INFO - 2026-09-04 17:36:21,239 - basePage.py:242 - [basePage:ocr_capture] - OCR识别成功：('xpath', '/html/body/form/table/tbody/tr/td[2]/table/tbody/tr[4]/td/img'),识别结果是：C26R
+
+
+INFO - 2026-09-04 19:24:02,939 - basePage.py:101 - [basePage:location_element] - 找到元素：xpath=/html/body/form/table/tbody/tr/td[2]/table/tbody/tr[4]/td/img
+INFO - 2026-09-04 19:24:03,453 - basePage.py:242 - [basePage:ocr_capture] - OCR识别成功：('xpath', '/html/body/form/table/tbody/tr/td[2]/table/tbody/tr[4]/td/img'),识别结果是：HTEC
+
+INFO - 2026-09-04 19:24:18,668 - basePage.py:101 - [basePage:location_element] - 找到元素：xpath=/html/body/form/table/tbody/tr/td[2]/table/tbody/tr[4]/td/img
+INFO - 2026-09-04 19:24:19,181 - basePage.py:242 - [basePage:ocr_capture] - OCR识别成功：('xpath', '/html/body/form/table/tbody/tr/td[2]/table/tbody/tr[4]/td/img'),识别结果是：‘GR7H--
+
+

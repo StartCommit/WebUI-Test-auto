@@ -1,0 +1,8 @@
+INFO - 2026-09-03 19:53:48,397 - basePage.py:101 - [basePage:location_element] - 找到元素：xpath=/html/body/form/table/tbody/tr/td[2]/table/tbody/tr[4]/td/img
+INFO - 2026-09-03 19:53:49,040 - basePage.py:242 - [basePage:ocr_capture] - OCR识别成功：('xpath', '/html/body/form/table/tbody/tr/td[2]/table/tbody/tr[4]/td/img'),识别结果是：WRDK)
+
+
+INFO - 2026-09-03 19:59:11,975 - basePage.py:102 - [basePage:location_element] - 找到元素：xpath=/html/body/form/table/tbody/tr/td[2]/table/tbody/tr[4]/td/img
+INFO - 2026-09-03 19:59:12,659 - basePage.py:243 - [basePage:ocr_capture] - OCR识别成功：('xpath', '/html/body/form/table/tbody/tr/td[2]/table/tbody/tr[4]/td/img'),识别结果是：8RIB
+
+
