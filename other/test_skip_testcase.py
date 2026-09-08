@@ -19,7 +19,7 @@ class TestSkipTestCase:
     def test_skip_04(self):
         print('跳过用例04')
 
-    @pytest.mark.xfail # 失败用例
+    @pytest.mark.xfail # 预期失败用例，告诉pytest这个测试用例是预期失败的
     def test_xfail_case_05(self):
         a= 1
         b = 2
