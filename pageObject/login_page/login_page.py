@@ -12,7 +12,7 @@ class LoginPage(BasePage):
     # 登录按钮
     submit = (By.NAME, "submit")
 
-    # 登录操作
+    # 登录操作步骤
     def login(self, user_name, pass_word):
         self.open_url(self.url)
         # 输入用户名
