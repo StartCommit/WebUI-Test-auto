@@ -1,0 +1,482 @@
+INFO - 2026-09-17 19:22:29,910 - conftest.py:14 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 19:22:31,999 - basePage.py:102 - [basePage:location_element] - 找到元素：name=username
+INFO - 2026-09-17 19:22:32,058 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'username'),输入的内容是：lisi23
+INFO - 2026-09-17 19:22:32,068 - basePage.py:102 - [basePage:location_element] - 找到元素：name=email
+INFO - 2026-09-17 19:22:32,122 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'email'),输入的内容是：dongli1314
+INFO - 2026-09-17 19:22:32,130 - basePage.py:102 - [basePage:location_element] - 找到元素：name=password
+INFO - 2026-09-17 19:22:32,202 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'password'),输入的内容是：lisi23@163.com
+INFO - 2026-09-17 19:22:32,212 - basePage.py:102 - [basePage:location_element] - 找到元素：name=confirm_password
+INFO - 2026-09-17 19:22:32,292 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'confirm_password'),输入的内容是：dongli1314
+INFO - 2026-09-17 19:22:32,304 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field1
+INFO - 2026-09-17 19:22:32,384 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field1'),输入的内容是：lisi23@163.com
+INFO - 2026-09-17 19:22:32,395 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field2
+INFO - 2026-09-17 19:22:32,468 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field2'),输入的内容是：123456
+INFO - 2026-09-17 19:22:32,481 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field3
+INFO - 2026-09-17 19:22:32,545 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field3'),输入的内容是：13912345678
+INFO - 2026-09-17 19:22:32,554 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field4
+INFO - 2026-09-17 19:22:32,615 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field4'),输入的内容是：13912345678
+INFO - 2026-09-17 19:22:32,626 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field5
+INFO - 2026-09-17 19:22:32,682 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field5'),输入的内容是：13912345678
+INFO - 2026-09-17 19:22:32,689 - basePage.py:102 - [basePage:location_element] - 找到元素：name=sel_question
+INFO - 2026-09-17 19:22:32,777 - basePage.py:275 - [basePage:select_by_text] - 下拉框选择（文本）：('name', 'sel_question') -> 我最喜爱的电影？
+ERROR - 2026-09-17 19:22:43,097 - basePage.py:105 - [basePage:location_element] - 未找到元素：name=question_answer
+INFO - 2026-09-17 19:22:45,448 - conftest.py:16 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-17 19:22:45,450 - conftest.py:14 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 19:22:47,017 - basePage.py:102 - [basePage:location_element] - 找到元素：name=username
+INFO - 2026-09-17 19:22:47,076 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'username'),输入的内容是：lisi23
+INFO - 2026-09-17 19:22:47,085 - basePage.py:102 - [basePage:location_element] - 找到元素：name=email
+INFO - 2026-09-17 19:22:47,138 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'email'),输入的内容是：dongli1314
+INFO - 2026-09-17 19:22:47,145 - basePage.py:102 - [basePage:location_element] - 找到元素：name=password
+INFO - 2026-09-17 19:22:47,208 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'password'),输入的内容是：lisi23@163.com
+INFO - 2026-09-17 19:22:47,216 - basePage.py:102 - [basePage:location_element] - 找到元素：name=confirm_password
+INFO - 2026-09-17 19:22:47,285 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'confirm_password'),输入的内容是：dongli1314
+INFO - 2026-09-17 19:22:47,299 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field1
+INFO - 2026-09-17 19:22:47,359 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field1'),输入的内容是：lisi23@163.com
+INFO - 2026-09-17 19:22:47,368 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field2
+INFO - 2026-09-17 19:22:47,427 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field2'),输入的内容是：123456
+INFO - 2026-09-17 19:22:47,437 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field3
+INFO - 2026-09-17 19:22:47,486 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field3'),输入的内容是：13912345678
+INFO - 2026-09-17 19:22:47,494 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field4
+INFO - 2026-09-17 19:22:47,549 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field4'),输入的内容是：13912345678
+INFO - 2026-09-17 19:22:47,559 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field5
+INFO - 2026-09-17 19:22:47,610 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field5'),输入的内容是：13912345678
+INFO - 2026-09-17 19:22:47,619 - basePage.py:102 - [basePage:location_element] - 找到元素：name=sel_question
+INFO - 2026-09-17 19:22:47,700 - basePage.py:275 - [basePage:select_by_text] - 下拉框选择（文本）：('name', 'sel_question') -> 我最喜爱的电影？
+ERROR - 2026-09-17 19:22:58,037 - basePage.py:105 - [basePage:location_element] - 未找到元素：name=question_answer
+INFO - 2026-09-17 19:23:00,303 - conftest.py:16 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-17 19:23:11,719 - conftest.py:14 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 19:23:13,411 - basePage.py:102 - [basePage:location_element] - 找到元素：name=username
+INFO - 2026-09-17 19:23:13,482 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'username'),输入的内容是：lisi23
+INFO - 2026-09-17 19:23:13,492 - basePage.py:102 - [basePage:location_element] - 找到元素：name=email
+INFO - 2026-09-17 19:23:13,562 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'email'),输入的内容是：dongli1314
+INFO - 2026-09-17 19:23:13,571 - basePage.py:102 - [basePage:location_element] - 找到元素：name=password
+INFO - 2026-09-17 19:23:13,666 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'password'),输入的内容是：lisi23@163.com
+INFO - 2026-09-17 19:23:13,678 - basePage.py:102 - [basePage:location_element] - 找到元素：name=confirm_password
+INFO - 2026-09-17 19:23:13,745 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'confirm_password'),输入的内容是：dongli1314
+INFO - 2026-09-17 19:23:13,755 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field1
+INFO - 2026-09-17 19:23:13,821 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field1'),输入的内容是：lisi23@163.com
+INFO - 2026-09-17 19:23:13,832 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field2
+INFO - 2026-09-17 19:23:13,913 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field2'),输入的内容是：123456
+INFO - 2026-09-17 19:23:13,927 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field3
+INFO - 2026-09-17 19:23:13,993 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field3'),输入的内容是：13912345678
+INFO - 2026-09-17 19:23:14,005 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field4
+INFO - 2026-09-17 19:23:14,067 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field4'),输入的内容是：13912345678
+INFO - 2026-09-17 19:23:14,078 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field5
+INFO - 2026-09-17 19:23:14,135 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field5'),输入的内容是：13912345678
+INFO - 2026-09-17 19:23:14,145 - basePage.py:102 - [basePage:location_element] - 找到元素：name=sel_question
+INFO - 2026-09-17 19:23:14,231 - basePage.py:275 - [basePage:select_by_text] - 下拉框选择（文本）：('name', 'sel_question') -> 我最喜爱的电影？
+INFO - 2026-09-17 19:23:14,251 - basePage.py:102 - [basePage:location_element] - 找到元素：name=passwd_answer
+INFO - 2026-09-17 19:23:14,299 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'passwd_answer'),输入的内容是：1
+INFO - 2026-09-17 19:23:14,306 - basePage.py:102 - [basePage:location_element] - 找到元素：name=agreement
+INFO - 2026-09-17 19:23:14,314 - basePage.py:139 - [basePage:click] - 元素点击：('name', 'agreement')
+INFO - 2026-09-17 19:23:14,322 - basePage.py:102 - [basePage:location_element] - 找到元素：name=Submit
+INFO - 2026-09-17 19:23:14,329 - basePage.py:139 - [basePage:click] - 元素点击：('name', 'Submit')
+INFO - 2026-09-17 19:23:19,573 - conftest.py:16 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-17 19:23:19,575 - conftest.py:14 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 19:23:21,148 - basePage.py:102 - [basePage:location_element] - 找到元素：name=username
+INFO - 2026-09-17 19:23:21,206 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'username'),输入的内容是：lisi23
+INFO - 2026-09-17 19:23:21,214 - basePage.py:102 - [basePage:location_element] - 找到元素：name=email
+INFO - 2026-09-17 19:23:21,272 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'email'),输入的内容是：dongli1314
+INFO - 2026-09-17 19:23:21,281 - basePage.py:102 - [basePage:location_element] - 找到元素：name=password
+INFO - 2026-09-17 19:23:21,346 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'password'),输入的内容是：lisi23@163.com
+INFO - 2026-09-17 19:23:21,353 - basePage.py:102 - [basePage:location_element] - 找到元素：name=confirm_password
+INFO - 2026-09-17 19:23:21,424 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'confirm_password'),输入的内容是：dongli1314
+INFO - 2026-09-17 19:23:21,433 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field1
+INFO - 2026-09-17 19:23:21,485 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field1'),输入的内容是：lisi23@163.com
+INFO - 2026-09-17 19:23:21,497 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field2
+INFO - 2026-09-17 19:23:21,550 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field2'),输入的内容是：123456
+INFO - 2026-09-17 19:23:21,559 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field3
+INFO - 2026-09-17 19:23:21,614 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field3'),输入的内容是：13912345678
+INFO - 2026-09-17 19:23:21,636 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field4
+INFO - 2026-09-17 19:23:21,680 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field4'),输入的内容是：13912345678
+INFO - 2026-09-17 19:23:21,688 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field5
+INFO - 2026-09-17 19:23:21,731 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field5'),输入的内容是：13912345678
+INFO - 2026-09-17 19:23:21,745 - basePage.py:102 - [basePage:location_element] - 找到元素：name=sel_question
+INFO - 2026-09-17 19:23:21,828 - basePage.py:275 - [basePage:select_by_text] - 下拉框选择（文本）：('name', 'sel_question') -> 我最喜爱的电影？
+INFO - 2026-09-17 19:23:21,836 - basePage.py:102 - [basePage:location_element] - 找到元素：name=passwd_answer
+INFO - 2026-09-17 19:23:21,877 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'passwd_answer'),输入的内容是：1
+INFO - 2026-09-17 19:23:21,885 - basePage.py:102 - [basePage:location_element] - 找到元素：name=agreement
+INFO - 2026-09-17 19:23:21,890 - basePage.py:139 - [basePage:click] - 元素点击：('name', 'agreement')
+INFO - 2026-09-17 19:23:21,899 - basePage.py:102 - [basePage:location_element] - 找到元素：name=Submit
+INFO - 2026-09-17 19:23:21,905 - basePage.py:139 - [basePage:click] - 元素点击：('name', 'Submit')
+INFO - 2026-09-17 19:23:27,236 - conftest.py:16 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-17 19:30:06,022 - conftest.py:14 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 19:30:07,574 - basePage.py:102 - [basePage:location_element] - 找到元素：name=username
+INFO - 2026-09-17 19:30:07,633 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'username'),输入的内容是：lisi234
+INFO - 2026-09-17 19:30:07,644 - basePage.py:102 - [basePage:location_element] - 找到元素：name=email
+INFO - 2026-09-17 19:30:07,703 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'email'),输入的内容是：lisi234@163.com
+INFO - 2026-09-17 19:30:07,712 - basePage.py:102 - [basePage:location_element] - 找到元素：name=password
+INFO - 2026-09-17 19:30:07,775 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'password'),输入的内容是：dongli1314
+INFO - 2026-09-17 19:30:07,784 - basePage.py:102 - [basePage:location_element] - 找到元素：name=confirm_password
+INFO - 2026-09-17 19:30:07,855 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'confirm_password'),输入的内容是：dongli1314
+INFO - 2026-09-17 19:30:07,863 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field1
+INFO - 2026-09-17 19:30:07,933 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field1'),输入的内容是：lisi234@163.com
+INFO - 2026-09-17 19:30:07,944 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field2
+INFO - 2026-09-17 19:30:08,012 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field2'),输入的内容是：123456
+INFO - 2026-09-17 19:30:08,021 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field3
+INFO - 2026-09-17 19:30:08,070 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field3'),输入的内容是：13912345678
+INFO - 2026-09-17 19:30:08,080 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field4
+INFO - 2026-09-17 19:30:08,128 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field4'),输入的内容是：13912345678
+INFO - 2026-09-17 19:30:08,138 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field5
+INFO - 2026-09-17 19:30:08,185 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field5'),输入的内容是：13912345678
+INFO - 2026-09-17 19:30:08,192 - basePage.py:102 - [basePage:location_element] - 找到元素：name=sel_question
+INFO - 2026-09-17 19:30:08,276 - basePage.py:275 - [basePage:select_by_text] - 下拉框选择（文本）：('name', 'sel_question') -> 我最喜爱的电影？
+INFO - 2026-09-17 19:30:08,285 - basePage.py:102 - [basePage:location_element] - 找到元素：name=passwd_answer
+INFO - 2026-09-17 19:30:08,338 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'passwd_answer'),输入的内容是：1
+INFO - 2026-09-17 19:30:08,346 - basePage.py:102 - [basePage:location_element] - 找到元素：name=agreement
+INFO - 2026-09-17 19:30:08,352 - basePage.py:139 - [basePage:click] - 元素点击：('name', 'agreement')
+INFO - 2026-09-17 19:30:08,360 - basePage.py:102 - [basePage:location_element] - 找到元素：name=Submit
+INFO - 2026-09-17 19:30:08,385 - basePage.py:139 - [basePage:click] - 元素点击：('name', 'Submit')
+INFO - 2026-09-17 19:30:13,802 - conftest.py:16 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-17 19:30:13,803 - conftest.py:14 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 19:30:15,334 - basePage.py:102 - [basePage:location_element] - 找到元素：name=username
+INFO - 2026-09-17 19:30:15,385 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'username'),输入的内容是：lisi234
+INFO - 2026-09-17 19:30:15,396 - basePage.py:102 - [basePage:location_element] - 找到元素：name=email
+INFO - 2026-09-17 19:30:15,458 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'email'),输入的内容是：lisi234@163.com
+INFO - 2026-09-17 19:30:15,468 - basePage.py:102 - [basePage:location_element] - 找到元素：name=password
+INFO - 2026-09-17 19:30:15,521 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'password'),输入的内容是：dongli1314
+INFO - 2026-09-17 19:30:15,528 - basePage.py:102 - [basePage:location_element] - 找到元素：name=confirm_password
+INFO - 2026-09-17 19:30:15,607 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'confirm_password'),输入的内容是：dongli1314
+INFO - 2026-09-17 19:30:15,648 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field1
+INFO - 2026-09-17 19:30:15,709 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field1'),输入的内容是：lisi234@163.com
+INFO - 2026-09-17 19:30:15,719 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field2
+INFO - 2026-09-17 19:30:15,764 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field2'),输入的内容是：123456
+INFO - 2026-09-17 19:30:15,771 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field3
+INFO - 2026-09-17 19:30:15,821 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field3'),输入的内容是：13912345678
+INFO - 2026-09-17 19:30:15,830 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field4
+INFO - 2026-09-17 19:30:15,883 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field4'),输入的内容是：13912345678
+INFO - 2026-09-17 19:30:15,893 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field5
+INFO - 2026-09-17 19:30:15,942 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field5'),输入的内容是：13912345678
+INFO - 2026-09-17 19:30:15,955 - basePage.py:102 - [basePage:location_element] - 找到元素：name=sel_question
+INFO - 2026-09-17 19:30:16,031 - basePage.py:275 - [basePage:select_by_text] - 下拉框选择（文本）：('name', 'sel_question') -> 我最喜爱的电影？
+INFO - 2026-09-17 19:30:16,041 - basePage.py:102 - [basePage:location_element] - 找到元素：name=passwd_answer
+INFO - 2026-09-17 19:30:16,089 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'passwd_answer'),输入的内容是：1
+INFO - 2026-09-17 19:30:16,098 - basePage.py:102 - [basePage:location_element] - 找到元素：name=agreement
+INFO - 2026-09-17 19:30:16,104 - basePage.py:139 - [basePage:click] - 元素点击：('name', 'agreement')
+INFO - 2026-09-17 19:30:16,111 - basePage.py:102 - [basePage:location_element] - 找到元素：name=Submit
+INFO - 2026-09-17 19:30:16,131 - basePage.py:139 - [basePage:click] - 元素点击：('name', 'Submit')
+INFO - 2026-09-17 19:30:21,451 - conftest.py:16 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-17 19:31:30,941 - conftest.py:14 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 19:31:32,610 - basePage.py:102 - [basePage:location_element] - 找到元素：name=username
+INFO - 2026-09-17 19:31:32,670 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'username'),输入的内容是：lisi234
+INFO - 2026-09-17 19:31:32,684 - basePage.py:102 - [basePage:location_element] - 找到元素：name=email
+INFO - 2026-09-17 19:31:32,758 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'email'),输入的内容是：lisi234@163.com
+INFO - 2026-09-17 19:31:32,767 - basePage.py:102 - [basePage:location_element] - 找到元素：name=password
+INFO - 2026-09-17 19:31:32,819 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'password'),输入的内容是：dongli1314
+INFO - 2026-09-17 19:31:32,830 - basePage.py:102 - [basePage:location_element] - 找到元素：name=confirm_password
+INFO - 2026-09-17 19:31:32,900 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'confirm_password'),输入的内容是：dongli1314
+INFO - 2026-09-17 19:31:32,913 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field1
+INFO - 2026-09-17 19:31:32,971 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field1'),输入的内容是：lisi234@163.com
+INFO - 2026-09-17 19:31:32,980 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field2
+INFO - 2026-09-17 19:31:33,021 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field2'),输入的内容是：123456
+INFO - 2026-09-17 19:31:33,032 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field3
+INFO - 2026-09-17 19:31:33,090 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field3'),输入的内容是：13912345678
+INFO - 2026-09-17 19:31:33,097 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field4
+INFO - 2026-09-17 19:31:33,147 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field4'),输入的内容是：13912345678
+INFO - 2026-09-17 19:31:33,156 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field5
+INFO - 2026-09-17 19:31:33,207 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field5'),输入的内容是：13912345678
+INFO - 2026-09-17 19:31:33,215 - basePage.py:102 - [basePage:location_element] - 找到元素：name=sel_question
+INFO - 2026-09-17 19:31:33,300 - basePage.py:275 - [basePage:select_by_text] - 下拉框选择（文本）：('name', 'sel_question') -> 我最喜爱的电影？
+INFO - 2026-09-17 19:31:33,308 - basePage.py:102 - [basePage:location_element] - 找到元素：name=passwd_answer
+INFO - 2026-09-17 19:31:33,362 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'passwd_answer'),输入的内容是：1
+INFO - 2026-09-17 19:31:33,369 - basePage.py:102 - [basePage:location_element] - 找到元素：name=agreement
+INFO - 2026-09-17 19:31:33,382 - basePage.py:102 - [basePage:location_element] - 找到元素：name=Submit
+INFO - 2026-09-17 19:31:33,511 - basePage.py:139 - [basePage:click] - 元素点击：('name', 'Submit')
+INFO - 2026-09-17 19:31:38,845 - conftest.py:16 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-17 19:31:38,847 - conftest.py:14 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 19:31:40,476 - basePage.py:102 - [basePage:location_element] - 找到元素：name=username
+INFO - 2026-09-17 19:31:40,537 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'username'),输入的内容是：lisi234
+INFO - 2026-09-17 19:31:40,548 - basePage.py:102 - [basePage:location_element] - 找到元素：name=email
+INFO - 2026-09-17 19:31:40,608 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'email'),输入的内容是：lisi234@163.com
+INFO - 2026-09-17 19:31:40,616 - basePage.py:102 - [basePage:location_element] - 找到元素：name=password
+INFO - 2026-09-17 19:31:40,666 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'password'),输入的内容是：dongli1314
+INFO - 2026-09-17 19:31:40,674 - basePage.py:102 - [basePage:location_element] - 找到元素：name=confirm_password
+INFO - 2026-09-17 19:31:40,755 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'confirm_password'),输入的内容是：dongli1314
+INFO - 2026-09-17 19:31:40,769 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field1
+INFO - 2026-09-17 19:31:40,829 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field1'),输入的内容是：lisi234@163.com
+INFO - 2026-09-17 19:31:40,838 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field2
+INFO - 2026-09-17 19:31:40,882 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field2'),输入的内容是：123456
+INFO - 2026-09-17 19:31:40,891 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field3
+INFO - 2026-09-17 19:31:40,940 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field3'),输入的内容是：13912345678
+INFO - 2026-09-17 19:31:40,948 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field4
+INFO - 2026-09-17 19:31:40,996 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field4'),输入的内容是：13912345678
+INFO - 2026-09-17 19:31:41,008 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field5
+INFO - 2026-09-17 19:31:41,061 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field5'),输入的内容是：13912345678
+INFO - 2026-09-17 19:31:41,068 - basePage.py:102 - [basePage:location_element] - 找到元素：name=sel_question
+INFO - 2026-09-17 19:31:41,144 - basePage.py:275 - [basePage:select_by_text] - 下拉框选择（文本）：('name', 'sel_question') -> 我最喜爱的电影？
+INFO - 2026-09-17 19:31:41,152 - basePage.py:102 - [basePage:location_element] - 找到元素：name=passwd_answer
+INFO - 2026-09-17 19:31:41,191 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'passwd_answer'),输入的内容是：1
+INFO - 2026-09-17 19:31:41,199 - basePage.py:102 - [basePage:location_element] - 找到元素：name=agreement
+INFO - 2026-09-17 19:31:41,213 - basePage.py:102 - [basePage:location_element] - 找到元素：name=Submit
+INFO - 2026-09-17 19:31:41,219 - basePage.py:139 - [basePage:click] - 元素点击：('name', 'Submit')
+INFO - 2026-09-17 19:31:46,462 - conftest.py:16 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-17 19:50:15,011 - conftest.py:14 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 19:50:16,708 - basePage.py:102 - [basePage:location_element] - 找到元素：name=username
+INFO - 2026-09-17 19:50:16,769 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'username'),输入的内容是：lisi
+INFO - 2026-09-17 19:50:16,777 - basePage.py:102 - [basePage:location_element] - 找到元素：name=password
+INFO - 2026-09-17 19:50:16,831 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'password'),输入的内容是：dongli13142
+INFO - 2026-09-17 19:50:16,840 - basePage.py:102 - [basePage:location_element] - 找到元素：name=submit
+INFO - 2026-09-17 19:50:16,848 - basePage.py:139 - [basePage:click] - 元素点击：('name', 'submit')
+INFO - 2026-09-17 19:50:22,094 - conftest.py:16 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-17 19:50:22,096 - conftest.py:14 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 19:50:23,725 - basePage.py:102 - [basePage:location_element] - 找到元素：name=username
+INFO - 2026-09-17 19:50:23,774 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'username'),输入的内容是：lisi
+INFO - 2026-09-17 19:50:23,786 - basePage.py:102 - [basePage:location_element] - 找到元素：name=password
+INFO - 2026-09-17 19:50:23,841 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'password'),输入的内容是：dongli1314
+INFO - 2026-09-17 19:50:23,848 - basePage.py:102 - [basePage:location_element] - 找到元素：name=submit
+INFO - 2026-09-17 19:50:23,954 - basePage.py:139 - [basePage:click] - 元素点击：('name', 'submit')
+INFO - 2026-09-17 19:50:29,353 - conftest.py:16 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-17 19:50:29,355 - conftest.py:14 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 19:50:30,920 - basePage.py:102 - [basePage:location_element] - 找到元素：name=username
+INFO - 2026-09-17 19:50:30,977 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'username'),输入的内容是：lisi234
+INFO - 2026-09-17 19:50:30,988 - basePage.py:102 - [basePage:location_element] - 找到元素：name=email
+INFO - 2026-09-17 19:50:31,045 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'email'),输入的内容是：lisi234@163.com
+INFO - 2026-09-17 19:50:31,055 - basePage.py:102 - [basePage:location_element] - 找到元素：name=password
+INFO - 2026-09-17 19:50:31,113 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'password'),输入的内容是：dongli1314
+INFO - 2026-09-17 19:50:31,120 - basePage.py:102 - [basePage:location_element] - 找到元素：name=confirm_password
+INFO - 2026-09-17 19:50:31,195 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'confirm_password'),输入的内容是：dongli1314
+INFO - 2026-09-17 19:50:31,203 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field1
+INFO - 2026-09-17 19:50:31,264 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field1'),输入的内容是：lisi234@163.com
+INFO - 2026-09-17 19:50:31,273 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field2
+INFO - 2026-09-17 19:50:31,333 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field2'),输入的内容是：123456
+INFO - 2026-09-17 19:50:31,345 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field3
+INFO - 2026-09-17 19:50:31,396 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field3'),输入的内容是：13912345678
+INFO - 2026-09-17 19:50:31,406 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field4
+INFO - 2026-09-17 19:50:31,451 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field4'),输入的内容是：13912345678
+INFO - 2026-09-17 19:50:31,460 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field5
+INFO - 2026-09-17 19:50:31,508 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field5'),输入的内容是：13912345678
+INFO - 2026-09-17 19:50:31,517 - basePage.py:102 - [basePage:location_element] - 找到元素：name=sel_question
+INFO - 2026-09-17 19:50:31,595 - basePage.py:275 - [basePage:select_by_text] - 下拉框选择（文本）：('name', 'sel_question') -> 我最喜爱的电影？
+INFO - 2026-09-17 19:50:31,606 - basePage.py:102 - [basePage:location_element] - 找到元素：name=passwd_answer
+INFO - 2026-09-17 19:50:31,646 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'passwd_answer'),输入的内容是：1
+INFO - 2026-09-17 19:50:31,654 - basePage.py:102 - [basePage:location_element] - 找到元素：name=agreement
+INFO - 2026-09-17 19:50:31,667 - basePage.py:102 - [basePage:location_element] - 找到元素：name=Submit
+INFO - 2026-09-17 19:50:31,673 - basePage.py:139 - [basePage:click] - 元素点击：('name', 'Submit')
+INFO - 2026-09-17 19:50:37,060 - conftest.py:16 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-17 19:50:37,062 - conftest.py:14 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 19:50:38,723 - basePage.py:102 - [basePage:location_element] - 找到元素：name=username
+INFO - 2026-09-17 19:50:38,782 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'username'),输入的内容是：lisi234
+INFO - 2026-09-17 19:50:38,791 - basePage.py:102 - [basePage:location_element] - 找到元素：name=email
+INFO - 2026-09-17 19:50:38,847 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'email'),输入的内容是：lisi234@163.com
+INFO - 2026-09-17 19:50:38,854 - basePage.py:102 - [basePage:location_element] - 找到元素：name=password
+INFO - 2026-09-17 19:50:38,910 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'password'),输入的内容是：dongli1314
+INFO - 2026-09-17 19:50:38,921 - basePage.py:102 - [basePage:location_element] - 找到元素：name=confirm_password
+INFO - 2026-09-17 19:50:39,008 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'confirm_password'),输入的内容是：dongli1314
+INFO - 2026-09-17 19:50:39,025 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field1
+INFO - 2026-09-17 19:50:39,076 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field1'),输入的内容是：lisi234@163.com
+INFO - 2026-09-17 19:50:39,085 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field2
+INFO - 2026-09-17 19:50:39,131 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field2'),输入的内容是：123456
+INFO - 2026-09-17 19:50:39,140 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field3
+INFO - 2026-09-17 19:50:39,184 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field3'),输入的内容是：13912345678
+INFO - 2026-09-17 19:50:39,194 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field4
+INFO - 2026-09-17 19:50:39,243 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field4'),输入的内容是：13912345678
+INFO - 2026-09-17 19:50:39,254 - basePage.py:102 - [basePage:location_element] - 找到元素：name=extend_field5
+INFO - 2026-09-17 19:50:39,306 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'extend_field5'),输入的内容是：13912345678
+INFO - 2026-09-17 19:50:39,314 - basePage.py:102 - [basePage:location_element] - 找到元素：name=sel_question
+INFO - 2026-09-17 19:50:39,386 - basePage.py:275 - [basePage:select_by_text] - 下拉框选择（文本）：('name', 'sel_question') -> 我最喜爱的电影？
+INFO - 2026-09-17 19:50:39,392 - basePage.py:102 - [basePage:location_element] - 找到元素：name=passwd_answer
+INFO - 2026-09-17 19:50:39,429 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'passwd_answer'),输入的内容是：1
+INFO - 2026-09-17 19:50:39,438 - basePage.py:102 - [basePage:location_element] - 找到元素：name=agreement
+INFO - 2026-09-17 19:50:39,450 - basePage.py:102 - [basePage:location_element] - 找到元素：name=Submit
+INFO - 2026-09-17 19:50:39,456 - basePage.py:139 - [basePage:click] - 元素点击：('name', 'Submit')
+INFO - 2026-09-17 19:50:44,735 - conftest.py:16 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-17 19:53:44,235 - conftest.py:14 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 19:53:45,890 - basePage.py:102 - [basePage:location_element] - 找到元素：name=username
+INFO - 2026-09-17 19:53:45,940 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'username'),输入的内容是：lisi
+INFO - 2026-09-17 19:53:45,952 - basePage.py:102 - [basePage:location_element] - 找到元素：name=password
+INFO - 2026-09-17 19:53:46,013 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'password'),输入的内容是：dongli13142
+INFO - 2026-09-17 19:53:46,021 - basePage.py:102 - [basePage:location_element] - 找到元素：name=submit
+INFO - 2026-09-17 19:53:46,032 - basePage.py:139 - [basePage:click] - 元素点击：('name', 'submit')
+INFO - 2026-09-17 19:53:51,289 - conftest.py:16 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-17 19:53:51,290 - conftest.py:14 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 19:53:52,943 - basePage.py:102 - [basePage:location_element] - 找到元素：name=username
+INFO - 2026-09-17 19:53:52,999 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'username'),输入的内容是：lisi
+INFO - 2026-09-17 19:53:53,013 - basePage.py:102 - [basePage:location_element] - 找到元素：name=password
+INFO - 2026-09-17 19:53:53,068 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'password'),输入的内容是：dongli1314
+INFO - 2026-09-17 19:53:53,094 - basePage.py:102 - [basePage:location_element] - 找到元素：name=submit
+INFO - 2026-09-17 19:53:53,200 - basePage.py:139 - [basePage:click] - 元素点击：('name', 'submit')
+INFO - 2026-09-17 19:53:58,506 - conftest.py:16 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-17 20:27:07,425 - conftest.py:16 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 20:27:07,810 - basePage.py:102 - [basePage:location_element] - 找到元素：name=username
+INFO - 2026-09-17 20:27:07,890 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'username'),输入的内容是：lisi
+INFO - 2026-09-17 20:27:07,903 - basePage.py:102 - [basePage:location_element] - 找到元素：name=password
+INFO - 2026-09-17 20:27:07,977 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'password'),输入的内容是：dongli13142
+INFO - 2026-09-17 20:27:08,000 - basePage.py:102 - [basePage:location_element] - 找到元素：name=submit
+INFO - 2026-09-17 20:27:08,142 - basePage.py:139 - [basePage:click] - 元素点击：('name', 'submit')
+INFO - 2026-09-17 20:27:11,350 - conftest.py:18 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-17 20:27:11,352 - conftest.py:16 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 20:27:11,460 - basePage.py:102 - [basePage:location_element] - 找到元素：name=username
+INFO - 2026-09-17 20:27:11,508 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'username'),输入的内容是：lisi
+INFO - 2026-09-17 20:27:11,517 - basePage.py:102 - [basePage:location_element] - 找到元素：name=password
+INFO - 2026-09-17 20:27:11,570 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'password'),输入的内容是：dongli1314
+INFO - 2026-09-17 20:27:11,577 - basePage.py:102 - [basePage:location_element] - 找到元素：name=submit
+INFO - 2026-09-17 20:27:11,675 - basePage.py:139 - [basePage:click] - 元素点击：('name', 'submit')
+INFO - 2026-09-17 20:27:14,812 - conftest.py:18 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-17 20:28:59,620 - conftest.py:16 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 20:28:59,855 - basePage.py:102 - [basePage:location_element] - 找到元素：name=username
+INFO - 2026-09-17 20:28:59,925 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'username'),输入的内容是：lisi
+INFO - 2026-09-17 20:28:59,934 - basePage.py:102 - [basePage:location_element] - 找到元素：name=password
+INFO - 2026-09-17 20:28:59,994 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'password'),输入的内容是：dongli1314
+INFO - 2026-09-17 20:29:00,005 - basePage.py:102 - [basePage:location_element] - 找到元素：name=submit
+INFO - 2026-09-17 20:29:00,128 - basePage.py:139 - [basePage:click] - 元素点击：('name', 'submit')
+INFO - 2026-09-17 20:29:03,273 - conftest.py:18 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-17 20:29:03,274 - conftest.py:16 - [conftest:info_output] - ——————测试用例开始执行——————
+ERROR - 2026-09-17 20:29:13,427 - basePage.py:105 - [basePage:location_element] - 未找到元素：name=username
+INFO - 2026-09-17 20:29:13,594 - conftest.py:18 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-17 20:30:09,538 - conftest.py:16 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 20:30:09,794 - basePage.py:102 - [basePage:location_element] - 找到元素：name=username
+INFO - 2026-09-17 20:30:09,858 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'username'),输入的内容是：lisi
+INFO - 2026-09-17 20:30:09,870 - basePage.py:102 - [basePage:location_element] - 找到元素：name=password
+INFO - 2026-09-17 20:30:09,944 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'password'),输入的内容是：dongli1314
+INFO - 2026-09-17 20:30:09,956 - basePage.py:102 - [basePage:location_element] - 找到元素：name=submit
+INFO - 2026-09-17 20:30:10,104 - basePage.py:139 - [basePage:click] - 元素点击：('name', 'submit')
+INFO - 2026-09-17 20:30:13,210 - conftest.py:18 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-17 20:30:13,211 - conftest.py:16 - [conftest:info_output] - ——————测试用例开始执行——————
+ERROR - 2026-09-17 20:30:23,343 - basePage.py:105 - [basePage:location_element] - 未找到元素：name=username
+INFO - 2026-09-17 20:30:23,506 - conftest.py:18 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-17 20:31:52,599 - conftest.py:16 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 20:31:54,307 - basePage.py:102 - [basePage:location_element] - 找到元素：name=username
+INFO - 2026-09-17 20:31:54,366 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'username'),输入的内容是：lisi
+INFO - 2026-09-17 20:31:54,379 - basePage.py:102 - [basePage:location_element] - 找到元素：name=password
+INFO - 2026-09-17 20:31:54,435 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'password'),输入的内容是：dongli1314
+INFO - 2026-09-17 20:31:54,468 - basePage.py:102 - [basePage:location_element] - 找到元素：name=submit
+INFO - 2026-09-17 20:31:54,593 - basePage.py:139 - [basePage:click] - 元素点击：('name', 'submit')
+INFO - 2026-09-17 20:31:59,964 - conftest.py:18 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-17 20:31:59,966 - conftest.py:16 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 20:32:01,624 - basePage.py:102 - [basePage:location_element] - 找到元素：name=username
+INFO - 2026-09-17 20:32:01,682 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'username'),输入的内容是：lisi
+INFO - 2026-09-17 20:32:01,695 - basePage.py:102 - [basePage:location_element] - 找到元素：name=password
+INFO - 2026-09-17 20:32:01,764 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'password'),输入的内容是：dongli13142
+INFO - 2026-09-17 20:32:01,777 - basePage.py:102 - [basePage:location_element] - 找到元素：name=submit
+INFO - 2026-09-17 20:32:01,901 - basePage.py:139 - [basePage:click] - 元素点击：('name', 'submit')
+INFO - 2026-09-17 20:32:07,314 - conftest.py:18 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-17 20:32:50,342 - conftest.py:16 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 20:32:52,118 - basePage.py:102 - [basePage:location_element] - 找到元素：name=username
+INFO - 2026-09-17 20:32:52,171 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'username'),输入的内容是：lisi
+INFO - 2026-09-17 20:32:52,188 - basePage.py:102 - [basePage:location_element] - 找到元素：name=password
+INFO - 2026-09-17 20:32:52,251 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'password'),输入的内容是：dongli1314
+INFO - 2026-09-17 20:32:52,274 - basePage.py:102 - [basePage:location_element] - 找到元素：name=submit
+INFO - 2026-09-17 20:32:52,282 - basePage.py:139 - [basePage:click] - 元素点击：('name', 'submit')
+INFO - 2026-09-17 20:32:57,533 - conftest.py:18 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-17 20:32:57,535 - conftest.py:16 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 20:32:59,230 - basePage.py:102 - [basePage:location_element] - 找到元素：name=username
+INFO - 2026-09-17 20:32:59,290 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'username'),输入的内容是：lisi
+INFO - 2026-09-17 20:32:59,300 - basePage.py:102 - [basePage:location_element] - 找到元素：name=password
+INFO - 2026-09-17 20:32:59,357 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'password'),输入的内容是：dongli13142
+INFO - 2026-09-17 20:32:59,371 - basePage.py:102 - [basePage:location_element] - 找到元素：name=submit
+INFO - 2026-09-17 20:32:59,474 - basePage.py:139 - [basePage:click] - 元素点击：('name', 'submit')
+INFO - 2026-09-17 20:33:04,916 - conftest.py:18 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-17 20:34:09,711 - conftest.py:16 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 20:34:11,455 - basePage.py:102 - [basePage:location_element] - 找到元素：name=username
+INFO - 2026-09-17 20:34:11,513 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'username'),输入的内容是：lisi
+INFO - 2026-09-17 20:34:11,526 - basePage.py:102 - [basePage:location_element] - 找到元素：name=password
+INFO - 2026-09-17 20:34:11,592 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'password'),输入的内容是：dongli1314
+INFO - 2026-09-17 20:34:11,603 - basePage.py:102 - [basePage:location_element] - 找到元素：name=submit
+INFO - 2026-09-17 20:34:11,612 - basePage.py:139 - [basePage:click] - 元素点击：('name', 'submit')
+INFO - 2026-09-17 20:34:16,860 - conftest.py:18 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-17 20:34:16,862 - conftest.py:16 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 20:34:18,546 - basePage.py:102 - [basePage:location_element] - 找到元素：name=username
+INFO - 2026-09-17 20:34:18,602 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'username'),输入的内容是：lisi
+INFO - 2026-09-17 20:34:18,614 - basePage.py:102 - [basePage:location_element] - 找到元素：name=password
+INFO - 2026-09-17 20:34:18,667 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'password'),输入的内容是：dongli13142
+INFO - 2026-09-17 20:34:18,677 - basePage.py:102 - [basePage:location_element] - 找到元素：name=submit
+INFO - 2026-09-17 20:34:18,685 - basePage.py:139 - [basePage:click] - 元素点击：('name', 'submit')
+INFO - 2026-09-17 20:34:23,931 - conftest.py:18 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-17 20:50:38,295 - conftest.py:16 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 20:50:38,511 - conftest.py:18 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-17 20:50:38,513 - conftest.py:16 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 20:50:38,525 - conftest.py:18 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-17 20:52:19,498 - conftest.py:16 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 20:53:54,941 - conftest.py:16 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 20:54:48,552 - conftest.py:16 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 21:03:24,317 - conftest.py:16 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 21:08:01,921 - conftest.py:18 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 21:08:48,337 - conftest.py:18 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 21:11:45,859 - conftest.py:17 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 21:11:48,731 - basePage.py:102 - [basePage:location_element] - 找到元素：name=username
+INFO - 2026-09-17 21:11:48,836 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'username'),输入的内容是：lisi
+INFO - 2026-09-17 21:11:48,857 - basePage.py:102 - [basePage:location_element] - 找到元素：name=password
+INFO - 2026-09-17 21:11:48,930 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'password'),输入的内容是：dongli1314
+INFO - 2026-09-17 21:11:48,962 - basePage.py:102 - [basePage:location_element] - 找到元素：name=submit
+INFO - 2026-09-17 21:11:49,073 - basePage.py:139 - [basePage:click] - 元素点击：('name', 'submit')
+INFO - 2026-09-17 21:11:54,746 - conftest.py:19 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-17 21:11:54,757 - conftest.py:17 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 21:11:56,628 - basePage.py:102 - [basePage:location_element] - 找到元素：name=username
+INFO - 2026-09-17 21:11:56,690 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'username'),输入的内容是：lisi
+INFO - 2026-09-17 21:11:56,701 - basePage.py:102 - [basePage:location_element] - 找到元素：name=password
+INFO - 2026-09-17 21:11:56,765 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'password'),输入的内容是：dongli13142
+INFO - 2026-09-17 21:11:56,774 - basePage.py:102 - [basePage:location_element] - 找到元素：name=submit
+INFO - 2026-09-17 21:11:56,907 - basePage.py:139 - [basePage:click] - 元素点击：('name', 'submit')
+INFO - 2026-09-17 21:12:02,235 - conftest.py:19 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-17 21:14:14,767 - conftest.py:17 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 21:14:16,611 - basePage.py:102 - [basePage:location_element] - 找到元素：name=username
+INFO - 2026-09-17 21:14:16,672 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'username'),输入的内容是：lisi
+INFO - 2026-09-17 21:14:16,682 - basePage.py:102 - [basePage:location_element] - 找到元素：name=password
+INFO - 2026-09-17 21:14:16,741 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'password'),输入的内容是：dongli1314
+INFO - 2026-09-17 21:14:16,749 - basePage.py:102 - [basePage:location_element] - 找到元素：name=submit
+INFO - 2026-09-17 21:14:16,759 - basePage.py:139 - [basePage:click] - 元素点击：('name', 'submit')
+INFO - 2026-09-17 21:14:22,049 - conftest.py:19 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-17 21:14:22,052 - conftest.py:17 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 21:14:23,820 - basePage.py:102 - [basePage:location_element] - 找到元素：name=username
+INFO - 2026-09-17 21:14:23,904 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'username'),输入的内容是：lisi
+INFO - 2026-09-17 21:14:23,916 - basePage.py:102 - [basePage:location_element] - 找到元素：name=password
+INFO - 2026-09-17 21:14:23,980 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'password'),输入的内容是：dongli13142
+INFO - 2026-09-17 21:14:23,989 - basePage.py:102 - [basePage:location_element] - 找到元素：name=submit
+INFO - 2026-09-17 21:14:24,127 - basePage.py:139 - [basePage:click] - 元素点击：('name', 'submit')
+INFO - 2026-09-17 21:14:26,349 - conftest.py:19 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-17 21:16:09,759 - conftest.py:17 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 21:16:12,609 - conftest.py:19 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-17 21:16:12,609 - conftest.py:17 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 21:16:15,250 - conftest.py:19 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-17 21:18:35,274 - conftest.py:17 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 21:19:01,631 - conftest.py:19 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-17 21:19:01,633 - conftest.py:17 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 21:19:01,746 - conftest.py:19 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-17 21:20:34,047 - conftest.py:17 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 21:20:36,141 - basePage.py:102 - [basePage:location_element] - 找到元素：name=username
+INFO - 2026-09-17 21:20:36,215 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'username'),输入的内容是：lisi
+INFO - 2026-09-17 21:20:36,227 - basePage.py:102 - [basePage:location_element] - 找到元素：name=password
+INFO - 2026-09-17 21:20:36,285 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'password'),输入的内容是：dongli1314
+INFO - 2026-09-17 21:20:36,293 - basePage.py:102 - [basePage:location_element] - 找到元素：name=submit
+INFO - 2026-09-17 21:20:36,320 - basePage.py:139 - [basePage:click] - 元素点击：('name', 'submit')
+INFO - 2026-09-17 21:20:38,697 - conftest.py:19 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-17 21:20:38,699 - conftest.py:17 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 21:20:40,387 - basePage.py:102 - [basePage:location_element] - 找到元素：name=username
+INFO - 2026-09-17 21:20:40,448 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'username'),输入的内容是：lisi
+INFO - 2026-09-17 21:20:40,458 - basePage.py:102 - [basePage:location_element] - 找到元素：name=password
+INFO - 2026-09-17 21:20:40,514 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'password'),输入的内容是：dongli13142
+INFO - 2026-09-17 21:20:40,523 - basePage.py:102 - [basePage:location_element] - 找到元素：name=submit
+INFO - 2026-09-17 21:20:40,530 - basePage.py:139 - [basePage:click] - 元素点击：('name', 'submit')
+INFO - 2026-09-17 21:20:43,283 - conftest.py:19 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-17 21:26:29,559 - conftest.py:17 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 21:26:31,872 - basePage.py:102 - [basePage:location_element] - 找到元素：name=username
+INFO - 2026-09-17 21:26:31,958 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'username'),输入的内容是：lisi
+INFO - 2026-09-17 21:26:31,972 - basePage.py:102 - [basePage:location_element] - 找到元素：name=password
+INFO - 2026-09-17 21:26:32,037 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'password'),输入的内容是：dongli1314
+INFO - 2026-09-17 21:26:32,069 - basePage.py:102 - [basePage:location_element] - 找到元素：name=submit
+INFO - 2026-09-17 21:26:32,264 - basePage.py:139 - [basePage:click] - 元素点击：('name', 'submit')
+INFO - 2026-09-17 21:26:34,573 - conftest.py:19 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-17 21:26:34,574 - conftest.py:17 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 21:26:36,279 - basePage.py:102 - [basePage:location_element] - 找到元素：name=username
+INFO - 2026-09-17 21:26:36,346 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'username'),输入的内容是：lisi
+INFO - 2026-09-17 21:26:36,356 - basePage.py:102 - [basePage:location_element] - 找到元素：name=password
+INFO - 2026-09-17 21:26:36,412 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'password'),输入的内容是：dongli13142
+INFO - 2026-09-17 21:26:36,425 - basePage.py:102 - [basePage:location_element] - 找到元素：name=submit
+INFO - 2026-09-17 21:26:36,432 - basePage.py:139 - [basePage:click] - 元素点击：('name', 'submit')
+INFO - 2026-09-17 21:26:39,173 - conftest.py:19 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-17 21:56:51,983 - conftest.py:17 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 21:56:54,079 - basePage.py:102 - [basePage:location_element] - 找到元素：name=username
+INFO - 2026-09-17 21:56:54,133 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'username'),输入的内容是：lisi
+INFO - 2026-09-17 21:56:54,152 - basePage.py:102 - [basePage:location_element] - 找到元素：name=password
+INFO - 2026-09-17 21:56:54,215 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'password'),输入的内容是：dongli1314
+INFO - 2026-09-17 21:56:54,223 - basePage.py:102 - [basePage:location_element] - 找到元素：name=submit
+INFO - 2026-09-17 21:56:54,231 - basePage.py:139 - [basePage:click] - 元素点击：('name', 'submit')
+INFO - 2026-09-17 21:56:56,613 - conftest.py:19 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-17 21:56:56,614 - conftest.py:17 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-17 21:56:58,295 - basePage.py:102 - [basePage:location_element] - 找到元素：name=username
+INFO - 2026-09-17 21:56:58,348 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'username'),输入的内容是：lisi
+INFO - 2026-09-17 21:56:58,356 - basePage.py:102 - [basePage:location_element] - 找到元素：name=password
+INFO - 2026-09-17 21:56:58,419 - basePage.py:154 - [basePage:send_keys] - 元素被输入内容：('name', 'password'),输入的内容是：dongli13142
+INFO - 2026-09-17 21:56:58,429 - basePage.py:102 - [basePage:location_element] - 找到元素：name=submit
+INFO - 2026-09-17 21:56:58,540 - basePage.py:139 - [basePage:click] - 元素点击：('name', 'submit')
+INFO - 2026-09-17 21:57:00,751 - conftest.py:19 - [conftest:info_output] - ——————测试用例结束执行——————

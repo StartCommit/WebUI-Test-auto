@@ -1,0 +1,40 @@
+INFO - 2026-09-14 21:27:39,787 - conftest.py:14 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-14 21:27:47,224 - conftest.py:16 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-14 21:27:47,227 - conftest.py:14 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-14 21:27:54,407 - conftest.py:16 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-14 21:29:39,074 - conftest.py:14 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-14 21:29:46,510 - conftest.py:16 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-14 21:29:46,513 - conftest.py:14 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-14 21:29:53,649 - conftest.py:16 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-14 21:59:20,607 - conftest.py:14 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-14 21:59:22,512 - basePage.py:101 - [basePage:location_element] - 找到元素：name=username
+INFO - 2026-09-14 21:59:22,575 - basePage.py:153 - [basePage:send_keys] - 元素被输入内容：('name', 'username'),输入的内容是：lisi
+INFO - 2026-09-14 21:59:22,585 - basePage.py:101 - [basePage:location_element] - 找到元素：name=password
+INFO - 2026-09-14 21:59:22,651 - basePage.py:153 - [basePage:send_keys] - 元素被输入内容：('name', 'password'),输入的内容是：dongli13142
+INFO - 2026-09-14 21:59:22,663 - basePage.py:101 - [basePage:location_element] - 找到元素：name=submit
+INFO - 2026-09-14 21:59:22,678 - basePage.py:138 - [basePage:click] - 元素点击：('name', 'submit')
+INFO - 2026-09-14 21:59:28,157 - conftest.py:16 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-14 21:59:28,159 - conftest.py:14 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-14 21:59:29,947 - basePage.py:101 - [basePage:location_element] - 找到元素：name=username
+INFO - 2026-09-14 21:59:30,034 - basePage.py:153 - [basePage:send_keys] - 元素被输入内容：('name', 'username'),输入的内容是：lisi
+INFO - 2026-09-14 21:59:30,047 - basePage.py:101 - [basePage:location_element] - 找到元素：name=password
+INFO - 2026-09-14 21:59:30,113 - basePage.py:153 - [basePage:send_keys] - 元素被输入内容：('name', 'password'),输入的内容是：dongli131422
+INFO - 2026-09-14 21:59:30,132 - basePage.py:101 - [basePage:location_element] - 找到元素：name=submit
+INFO - 2026-09-14 21:59:30,242 - basePage.py:138 - [basePage:click] - 元素点击：('name', 'submit')
+INFO - 2026-09-14 21:59:35,509 - conftest.py:16 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-14 22:00:59,898 - conftest.py:14 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-14 22:01:01,632 - basePage.py:101 - [basePage:location_element] - 找到元素：name=username
+INFO - 2026-09-14 22:01:01,689 - basePage.py:153 - [basePage:send_keys] - 元素被输入内容：('name', 'username'),输入的内容是：lisi
+INFO - 2026-09-14 22:01:01,702 - basePage.py:101 - [basePage:location_element] - 找到元素：name=password
+INFO - 2026-09-14 22:01:01,751 - basePage.py:153 - [basePage:send_keys] - 元素被输入内容：('name', 'password'),输入的内容是：dongli1314
+INFO - 2026-09-14 22:01:01,763 - basePage.py:101 - [basePage:location_element] - 找到元素：name=submit
+INFO - 2026-09-14 22:01:01,771 - basePage.py:138 - [basePage:click] - 元素点击：('name', 'submit')
+INFO - 2026-09-14 22:01:07,015 - conftest.py:16 - [conftest:info_output] - ——————测试用例结束执行——————
+INFO - 2026-09-14 22:01:07,017 - conftest.py:14 - [conftest:info_output] - ——————测试用例开始执行——————
+INFO - 2026-09-14 22:01:08,723 - basePage.py:101 - [basePage:location_element] - 找到元素：name=username
+INFO - 2026-09-14 22:01:08,781 - basePage.py:153 - [basePage:send_keys] - 元素被输入内容：('name', 'username'),输入的内容是：lisi
+INFO - 2026-09-14 22:01:08,792 - basePage.py:101 - [basePage:location_element] - 找到元素：name=password
+INFO - 2026-09-14 22:01:08,846 - basePage.py:153 - [basePage:send_keys] - 元素被输入内容：('name', 'password'),输入的内容是：dongli13142
+INFO - 2026-09-14 22:01:08,855 - basePage.py:101 - [basePage:location_element] - 找到元素：name=submit
+INFO - 2026-09-14 22:01:08,862 - basePage.py:138 - [basePage:click] - 元素点击：('name', 'submit')
+INFO - 2026-09-14 22:01:14,103 - conftest.py:16 - [conftest:info_output] - ——————测试用例结束执行——————
