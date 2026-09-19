@@ -18,6 +18,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 import pytesseract
 from PIL import Image
+from selenium.webdriver.support.ui import Select
 
 
 class BasePage(object):
@@ -246,6 +247,80 @@ class BasePage(object):
                 f"找不到tesseract,因为pytesseracts依赖tesseract-ocr引擎进行图像识别！"
             )
 
+    def select_by_index(self, locator: tuple, index: int):
+        """通过索引选择下拉框选项"""
+        try:
+            element = self.location_element(*locator)
+            Select(element).select_by_index(index)
+            logs.info(f"下拉框选择（索引）：{locator} -> {index}")
+        except Exception as e:
+            logs.error(f"下拉框选择失败：{locator} -> {index}")
+            raise e
+
+    def select_by_value(self, locator: tuple, value: str):
+        """通过 value 属性选择下拉框选项"""
+        try:
+            element = self.location_element(*locator)
+            Select(element).select_by_value(value)
+            logs.info(f"下拉框选择（value）：{locator} -> {value}")
+        except Exception as e:
+            logs.error(f"下拉框选择失败：{locator} -> {value}")
+            raise e
+
+    def select_by_text(self, locator: tuple, text: str):
+        """通过可见文本选择下拉框选项"""
+        try:
+            element = self.location_element(*locator)
+            Select(element).select_by_visible_text(text)
+            logs.info(f"下拉框选择（文本）：{locator} -> {text}")
+        except Exception as e:
+            logs.error(f"下拉框选择失败：{locator} -> {text}")
+            raise e
+
+    def deselect_by_index(self, locator: tuple, index: int):
+        """通过索引取消选择（多选下拉框）"""
+        try:
+            element = self.location_element(*locator)
+            Select(element).deselect_by_index(index)
+            logs.info(f"下拉框取消选择（索引）：{locator} -> {index}")
+        except Exception as e:
+            logs.error(f"下拉框取消选择失败：{locator} -> {index}")
+            raise e
+
+    def deselect_by_value(self, locator: tuple, value: str):
+        """通过 value 属性取消选择（多选下拉框）"""
+        try:
+            element = self.location_element(*locator)
+            Select(element).deselect_by_value(value)
+            logs.info(f"下拉框取消选择（value）：{locator} -> {value}")
+        except Exception as e:
+            logs.error(f"下拉框取消选择失败：{locator} -> {value}")
+            raise e
+
+    def deselect_by_text(self, locator: tuple, text: str):
+        """通过可见文本取消选择（多选下拉框）"""
+        try:
+            element = self.location_element(*locator)
+            Select(element).deselect_by_visible_text(text)
+            logs.info(f"下拉框取消选择（文本）：{locator} -> {text}")
+        except Exception as e:
+            logs.error(f"下拉框取消选择失败：{locator} -> {text}")
+            raise e
+
+    def deselect_all(self, locator: tuple):
+        """取消所有选项（多选下拉框）"""
+        try:
+            element = self.location_element(*locator)
+            Select(element).deselect_all()
+            logs.info(f"下拉框取消所有选择：{locator}")
+        except Exception as e:
+            logs.error(f"下拉框取消所有选择失败：{locator}")
+            raise e
+
+    def is_selected(self, locator: tuple) -> bool:
+        """判断元素是否已勾选（用于 checkbox / radio）"""
+        element = self.location_element(*locator)
+        return element.is_selected()
 
 if __name__ == "__main__":
     options = Options()
