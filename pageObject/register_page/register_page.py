@@ -32,7 +32,7 @@ class RegisterPage(BasePage):
     # 注册按钮
     submit = (By.NAME, "Submit")
 
-    # 注册操作
+    # 注册操作步骤
     def register(self, user_name, email, password, confirm_password, msn, qq, public_telephone, family_telephone, phone,
                  question_text, question_answer):
         self.open_url(self.url)
