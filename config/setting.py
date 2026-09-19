@@ -8,6 +8,8 @@ sys.path.append(DIR_PATH)
 # 显示等待时间设置。默认10 秒
 WAIT_TIME = 10
 
+# 浏览器设置
+browser_type = "chrome"
 # 文件路径
 FILE_PATH = {
     "config": os.path.join(DIR_PATH, "config.ini"),
