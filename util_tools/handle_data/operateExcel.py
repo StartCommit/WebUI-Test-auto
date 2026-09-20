@@ -1,7 +1,5 @@
 import os.path
-
 from openpyxl import load_workbook
-
 from util_tools.logs_util.recordlog import logs
 
 
