@@ -322,6 +322,30 @@ class BasePage(object):
         element = self.location_element(*locator)
         return element.is_selected()
 
+    def assert_is_element_present(self, locator: tuple):
+        """
+        判断元素是否存在
+        :param locator: 定位元素方法及定位表达式
+        :return:
+        """
+        try:
+            element = self.__driver.find_element(*locator)
+            assert element.is_displayed(), '元素不存在'
+            return element
+        except NoSuchElementException as e:
+            logs.error(f"{locator}元素未找到")
+            raise AssertionError('元素不存在')
+
+
+    def assert_title(self,expected_title):
+        """
+        断言预期标题文本是否包含在实际文本中
+        :param expected_title:
+        :return:
+        """
+        assert expected_title in self.__driver.title, '标题不匹配'
+
+
 if __name__ == "__main__":
     options = Options()
     options.add_experimental_option('excludeSwitches', ['enable-logging'])
