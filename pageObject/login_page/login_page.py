@@ -11,7 +11,8 @@ class LoginPage(BasePage):
     password = (By.NAME, "password")
     # 登录按钮
     submit = (By.NAME, "submit")
-
+    # 断言结果
+    assert_result = (By.XPATH, '//*[@id="ECS_MEMBERZONE"]/font/font')
     # 登录操作步骤
     def login(self, user_name, pass_word):
         self.open_url(self.url)
