@@ -1,5 +1,6 @@
 import os.path
 from openpyxl import load_workbook
+
 from util_tools.logs_util.recordlog import logs
 
 
@@ -39,7 +40,7 @@ class ExcelDataReader:
             all_rows_data = []
             sheet = self.workbook[sheet_name]
             max_col = sheet.max_column  # 读取最大列数
-            for row in sheet.iter_rows(min_row=1, max_row=sheet.max_row, min_col=1, max_col=max_col):
+            for row in sheet.iter_rows(min_row=2, max_row=sheet.max_row, min_col=1, max_col=max_col):
                 row_data = [cell.value for cell in row]
                 all_rows_data.append(row_data)
             return all_rows_data
@@ -56,13 +57,14 @@ class ExcelDataReader:
         try:
             column_data = []
             sheet = self.workbook[sheet_name]
+            # min_row：从哪一行开始读取，max_row：从哪一行结束读取，min_col：从哪一列开始读取，max_col：从哪一列结束读取
             for row in sheet.iter_rows(min_row=1, max_row=sheet.max_row, min_col=column_index, max_col=column_index):
                 column_data.append(row[0].value)
             return column_data
         except Exception as e:
             logs.error('读取Excel文件数据异常,异常原因为{}'.format(e))
-        finally:
-            self.close()
+        # finally:
+        #     self.close()
 
     def read_cell_value(self, row_index=1, column_index=1, sheet_name='Sheet1'):
         """
