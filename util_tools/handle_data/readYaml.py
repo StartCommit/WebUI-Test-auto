@@ -18,5 +18,5 @@ def read_yaml(file_path):
     except Exception as e:
         logs.error('读取yaml文件数据异常，异常原因为{}'.format(e))
 
-res = read_yaml('D:\Test\WEB\data\login.yaml')
+res = read_yaml('D:/Test/WEB/data/login.yaml')
 print(res)
