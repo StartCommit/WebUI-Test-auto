@@ -35,7 +35,7 @@ def get_driver():
     # 设置一个全局的隐式等待时间
     driver.implicitly_wait(WAIT_TIME)
     # 最大化浏览器窗口
-    driver.maximize_window()
+    # driver.maximize_window()
     yield driver
     driver.quit()
 
