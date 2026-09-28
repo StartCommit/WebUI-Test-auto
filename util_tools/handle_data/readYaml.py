@@ -1,5 +1,7 @@
 import yaml
 from util_tools.logs_util.recordlog import logs
+
+
 def read_yaml(file_path):
     """
     读取yaml文件的数据
@@ -12,11 +14,12 @@ def read_yaml(file_path):
             data = yaml.load(file, Loader=yaml.FullLoader)
             for data_str in data:
                 if data_str is not None:
-                    data_tuple = tuple(data_str.split(','))
+                    data_tuple = tuple(map(str.strip, data_str.split(',')))
                     data_list_tuple.append(data_tuple)
             return data_list_tuple
     except Exception as e:
         logs.error('读取yaml文件数据异常，异常原因为{}'.format(e))
+
 
 res = read_yaml('D:/Test/WEB/data/login.yaml')
 print(res)
