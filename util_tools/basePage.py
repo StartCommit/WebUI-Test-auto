@@ -13,7 +13,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.chrome.options import Options
 from config import setting
 from util_tools.logs_util.recordlog import logs
-from selenium.common import NoSuchElementException
+from selenium.common import NoSuchElementException, TimeoutException
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 import pytesseract
@@ -324,7 +324,7 @@ class BasePage(object):
 
     def assert_is_element_present(self, locator: tuple):
         """
-        判断元素是否存在
+        判断元素存在，可见
         :param locator: 定位元素方法及定位表达式
         :return:
         """
@@ -336,8 +336,18 @@ class BasePage(object):
             logs.error(f"{locator}元素未找到")
             raise AssertionError('元素不存在')
 
+    def assert_element_not_visible(self, locator: tuple):
+        """
+        判断元素是不存在，不可见
+        :param locator: 定位元素方法及定位
+        :return:
+        """
+        try:
+            self.__wait.until(ec.invisibility_of_element_located(locator))
+        except TimeoutException:
+            logs.error("元素可见")
 
-    def assert_title(self,expected_title):
+    def assert_title(self, expected_title):
         """
         断言预期标题文本是否包含在实际文本中
         :param expected_title:
