@@ -31,6 +31,12 @@ class RegisterPage(BasePage):
     agree = (By.NAME, "agreement")
     # 注册按钮
     submit = (By.NAME, "Submit")
+    # 断言结果定位
+    assert_result = (By.XPATH, '/html/body/div[7]/div[2]/div/div/div/font/b')
+    # 断言用户已存在的结果
+    assert_user_exists = (By.XPATH, '//*@id="username_notice"]')
+    # 跳转登录
+    skip_login_button = (By.PARTIAL_LINK_TEXT, '我要登录')
 
     # 注册操作步骤
     def register(self, user_name, email, password, confirm_password, msn, qq, public_telephone, family_telephone, phone,
@@ -63,3 +69,8 @@ class RegisterPage(BasePage):
             self.click(self.agree)
         # 点击登录按钮
         self.click(self.submit)
+
+    def skip_login_page(self):
+        self.open_url(self.url)
+        # 跳转登录
+        self.click(self.skip_login_button)
