@@ -57,6 +57,6 @@ class TestRegister:
     # 跳转登录功能
     def test_check_skip_login(self, get_driver):
         register_page = RegisterPage(get_driver)
-        register_page.skip_login_button()
+        register_page.skip_login_page()
         # 断言结果
         assert register_page.current_url == 'http://localhost/ecshop/user.php?act=login'
