@@ -19,6 +19,7 @@ from selenium.webdriver.common.keys import Keys
 import pytesseract
 from PIL import Image
 from selenium.webdriver.support.ui import Select
+from util_tools.handle_data.configParse import ConfigParse
 
 
 class BasePage(object):
@@ -32,6 +33,7 @@ class BasePage(object):
         self.__driver = driver
         # 显示等待初始化
         self.__wait = WebDriverWait(self.__driver, setting.WAIT_TIME)
+        self.conf = ConfigParse()
 
     def window_max(self):
         """浏览器窗口最大化"""
@@ -47,7 +49,11 @@ class BasePage(object):
 
     def open_url(self, url):
         """打开指定url"""
-        self.__driver.get(url)
+        if url.startswith("http") or url.startswith("https"):
+            self.__driver.get(url)
+        else:
+            new_url = self.conf.get_host('host') + url
+            self.__driver.get(new_url)
 
     @property
     def current_url(self):
