@@ -4,7 +4,7 @@ from util_tools.basePage import BasePage
 
 class RegisterPage(BasePage):
     # url
-    url = "http://localhost/ecshop/user.php?act=register"
+    url = "/user.php?act=register"
     # 用户名
     user_name = (By.NAME, "username")
     # 邮箱
@@ -34,7 +34,7 @@ class RegisterPage(BasePage):
     # 断言结果定位
     assert_result = (By.XPATH, '/html/body/div[7]/div[2]/div/div/div/font/b')
     # 断言用户已存在的结果
-    assert_user_exists = (By.XPATH, '//*@id="username_notice"]')
+    assert_user_exists = (By.XPATH, '//*[@id="username_notice"]')
     # 跳转登录
     skip_login_button = (By.PARTIAL_LINK_TEXT, '我要登录')
 
