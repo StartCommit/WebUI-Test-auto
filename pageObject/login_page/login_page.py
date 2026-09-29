@@ -4,7 +4,7 @@ from util_tools.basePage import BasePage
 
 class LoginPage(BasePage):
     # url
-    url = "http://localhost/ecshop/user.php"
+    url = "/user.php"
     # 用户名
     username = (By.NAME, "username")
     # 密码
