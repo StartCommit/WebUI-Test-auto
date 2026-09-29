@@ -1,6 +1,8 @@
 from time import sleep
 import pytest
 from selenium.common import NoAlertPresentException
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 from util_tools.handle_data.readYaml import read_yaml
 from util_tools.handle_data.operateJson import read_json
@@ -52,6 +54,9 @@ class TestLogin:
         login_page.login(username, password)
 
         # 断言登录结果
+        WebDriverWait(get_driver, 10).until(
+            EC.title_contains("系统提示")  # type: ignore
+        )
         login_page.assert_title('系统提示')
         sleep(3)
 
