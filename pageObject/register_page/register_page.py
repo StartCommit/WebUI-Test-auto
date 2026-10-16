@@ -1,3 +1,4 @@
+import allure
 from selenium.webdriver.common.by import By
 from util_tools.basePage import BasePage
 
@@ -39,9 +40,11 @@ class RegisterPage(BasePage):
     skip_login_button = (By.PARTIAL_LINK_TEXT, '我要登录')
 
     # 注册操作步骤
+    @allure.step("填写注册信息并提交")
     def register(self, user_name, email, password, confirm_password, msn, qq, public_telephone, family_telephone, phone,
                  question_text, question_answer):
         self.open_url(self.url)
+        self.attach_text(self.url, '打开注册页面网址')
         # 输入用户名
         self.send_keys(self.user_name, user_name)
         # 输入邮箱
@@ -70,7 +73,10 @@ class RegisterPage(BasePage):
         # 点击登录按钮
         self.click(self.submit)
 
+    @allure.step("注册页-跳转登录页面")
     def skip_login_page(self):
         self.open_url(self.url)
+        self.attach_text(self.url, '打开注册页面网址')
         # 跳转登录
         self.click(self.skip_login_button)
+        self.attach_text(self.current_url, '跳转登录页面网址')
