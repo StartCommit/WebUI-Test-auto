@@ -1,6 +1,5 @@
 import os.path
 from openpyxl import load_workbook
-
 from util_tools.logs_util.recordlog import logs
 
 
@@ -63,8 +62,6 @@ class ExcelDataReader:
             return column_data
         except Exception as e:
             logs.error('读取Excel文件数据异常,异常原因为{}'.format(e))
-        # finally:
-        #     self.close()
 
     def read_cell_value(self, row_index=1, column_index=1, sheet_name='Sheet1'):
         """
@@ -82,12 +79,3 @@ class ExcelDataReader:
 
     def close(self):
         self.workbook.close()
-
-
-if __name__ == '__main__':
-    exl = ExcelDataReader('D:/Test/WEB/data/login_testdata.xlsx')
-    print(exl.read_cell_value(row_index=4, column_index=1))
-
-    # data = ['lisi', '123456','1']  #解包
-    # user_name,*password = data
-    # print(user_name,password)
