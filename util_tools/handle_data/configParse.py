@@ -45,9 +45,27 @@ class ConfigParse:
         host = self.get_value('HOST', option)
         return host
 
+    def get_section_mysql(self, option):
+        """
+        获取host
+        :return:
+        """
+        host = self.get_value('MYSQL', option)
+        return host
 
-if __name__ == '__main__':
-    config = ConfigParse()
-    # res = config.get_value('HOST', 'host')
-    res = config.get_host('host')
-    print(res)
+    def get_section_ding(self, option):
+        """
+        获取host
+        :return:
+        """
+        host = self.get_value('DINGTALK', option)
+        return host
+
+
+# if __name__ == '__main__':
+#     config = ConfigParse()
+#     # res = config.get_value('HOST', 'host')
+#     # res = config.get_host('host')
+#     res = config.get_section_ding('secret')
+#     print(res)
+
