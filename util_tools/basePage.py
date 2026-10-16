@@ -1,6 +1,7 @@
 import os
 import sys
 from pathlib import Path
+import allure
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from time import sleep
@@ -13,7 +14,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.chrome.options import Options
 from config import setting
 from util_tools.logs_util.recordlog import logs
-from selenium.common import NoSuchElementException, TimeoutException
+from selenium.common import NoSuchElementException, TimeoutException, NoSuchWindowException, NoSuchFrameException
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 import pytesseract
@@ -43,16 +44,18 @@ class BasePage(object):
         """浏览器全屏"""
         self.__driver.fullscreen_window()
 
-    def screenshot(self):
-        """截图"""
-        self.__driver.get_screenshot_as_png()
+    # def screenshot(self):
+    #     """截图"""
+    #     self.__driver.get_screenshot_as_png()
 
     def open_url(self, url):
         """打开指定url"""
         if url.startswith("http") or url.startswith("https"):
+            logs.info(f"打开页面：{url}")
             self.__driver.get(url)
         else:
             new_url = self.conf.get_host('host') + url
+            logs.info(f"打开页面：{new_url}")
             self.__driver.get(new_url)
 
     @property
@@ -69,6 +72,26 @@ class BasePage(object):
         """刷新当前页面"""
         self.__driver.refresh()
 
+    def get_tag_text(self, locator: tuple):
+        """获取标签的文本"""
+        try:
+            text = self.location_element(*locator).text
+            logs.info(f"获取标签的文本内容：{text}")
+            return text
+        except Exception as e:
+            logs.error(f"获取标签的文本失败：{str(e)}")
+            return ''
+
+    def get_element_value(self, locator: tuple):
+        """获取输入框/文本域的内容"""
+        try:
+            value = self.location_element(*locator).get_attribute('value')
+            logs.info(f"获取输入框内容：{value}")
+            return value
+        except Exception as e:
+            logs.error(f"获取输入框内容失败：{str(e)}")
+            return ''
+
     @property
     def switch_to(self):
         """切换switch_to"""
@@ -76,7 +99,32 @@ class BasePage(object):
 
     def iframe(self, frame):
         """切换iframe内联框架"""
-        self.switch_to.frame(frame)
+        try:
+            self.switch_to.frame(frame)
+            logs.info(f"切换iframe内联框架：{frame}")
+        except NoSuchFrameException:
+            logs.error(f"未找到iframe内联框架：{frame}")
+            raise
+
+    def switch_to_new_tab(self):
+        """浏览器打开新的标签页，切换窗口句柄"""
+        try:
+            original_windows = self.__driver.window_handles[0]  # 获取当前窗口句柄作为原始窗口
+            all_window = self.__driver.window_handles  # 获取所有窗口句柄列表
+            new_window = None
+            for window in all_window:
+                if window != original_windows:  # 找到不等于原始窗口句柄的新窗口句柄
+                    new_window = window
+                    break
+            if new_window:
+                self.__driver.switch_to.window(new_window)  # 切换到新窗口，以便于在新窗口上执行后续操作
+                logs.info('成功切换到新标签页')
+        except TimeoutException:
+            logs.error('等待打开新标签页超时')
+        except NoSuchWindowException:
+            logs.error('未找到新标签页句柄')
+        except Exception as e:
+            logs.error(f"切换新标签页失败：{e}")
 
     def exit_iframe(self):
         """退出iframe内联框架"""
@@ -211,8 +259,57 @@ class BasePage(object):
             file_path = os.path.join(setting.FILE_PATH["screenshot"], file_name)
             self.__driver.get_screenshot_as_file(file_path)
             logs.info(f"截图成功,文件位置：{file_path}")
+            return file_path
         except Exception as e:
             logs.error(f"截图失败：{e}")
+            raise e
+
+    def screenshots_png(self):
+        """
+        页面截屏，保存为png文件
+        :return:
+        """
+        return self.__driver.get_screenshot_as_png()
+
+    def attach_screenshot(self, name='截图', attachment_type=allure.attachment_type.PNG):
+        """
+        把当前页面截图附加到 allure 报告
+        :param name: 附件在报告里的显示名字
+        :param attachment_type: 附件类型，默认 PNG
+        """
+        try:
+            png = self.screenshots_png()
+            allure.attach(png, name=name, attachment_type=attachment_type)
+            logs.info(f'allure 附件已添加：{name}')
+        except Exception as e:
+            logs.error(f'添加 allure 截图附件失败：{e}')
+            raise e
+
+    def attach_file(self, file_path, name='附件', attachment_type=allure.attachment_type.TEXT):
+        """
+        把指定文件作为附件附加到 allure 报告
+        :param file_path: 文件路径
+        :param name: 附件显示名字
+        :param attachment_type: 附件类型
+        """
+        try:
+            allure.attach.file(file_path, name=name, attachment_type=attachment_type)
+            logs.info(f'allure 文件附件已添加：{name} -> {file_path}')
+        except Exception as e:
+            logs.error(f'添加 allure 文件附件失败：{e}')
+            raise e
+
+    def attach_text(self, content, name='文本'):
+        """
+        把一段文本作为附件附加到 allure 报告
+        :param content: 文本内容
+        :param name: 附件显示名字
+        """
+        try:
+            allure.attach(content, name=name, attachment_type=allure.attachment_type.TEXT)
+            logs.info(f'allure 文本附件已添加：{name}')
+        except Exception as e:
+            logs.error(f'添加 allure 文本附件失败：{e}')
             raise e
 
     def clear(self, locator: tuple):
@@ -226,7 +323,7 @@ class BasePage(object):
             element.clear()
             logs.info("清空文本")
         except NoSuchElementException as e:
-            logs.error(f"双击失败：{e}")
+            logs.error(f"清空文本失败：{e}")
             raise e
 
     def ocr_capture(self, locator: tuple):
@@ -328,6 +425,18 @@ class BasePage(object):
         element = self.location_element(*locator)
         return element.is_selected()
 
+    def is_element_present(self, locator: tuple) -> bool:
+        """
+        判断元素存在
+        :param locator: 定位元素方法及定位表达式
+        :return:
+        """
+        try:
+            self.__wait.until(ec.presence_of_element_located(locator))
+            return True
+        except TimeoutException:
+            return False
+
     def assert_is_element_present(self, locator: tuple):
         """
         判断元素存在，可见
@@ -351,7 +460,8 @@ class BasePage(object):
         try:
             self.__wait.until(ec.invisibility_of_element_located(locator))
         except TimeoutException:
-            logs.error("元素可见")
+            logs.error("元素可见，断言失败")
+            raise AssertionError("元素可见")
 
     def assert_title(self, expected_title):
         """
@@ -362,45 +472,12 @@ class BasePage(object):
         assert expected_title in self.__driver.title, '标题不匹配'
 
 
-if __name__ == "__main__":
-    options = Options()
-    options.add_experimental_option('excludeSwitches', ['enable-logging'])
-    driver = webdriver.Chrome(
-        service=Service(r"D:\chromedriver-win64\chromedriver.exe"),
-        options=options,
-    )
-    base = BasePage(driver)
-
-    base.open_url('http://localhost/ecshop/admin/privilege.php?act=login')
-    locator = (By.XPATH, '/html/body/form/table/tbody/tr/td[2]/table/tbody/tr[4]/td/img')
-    base.ocr_capture(locator)
-
-    # base.open_url('https://leafground.com/input.xhtml')
-    # locator = (By.ID, 'j_idt88:name')
-    # base.send_keys(locator, '输入内容定位')
-
-    # base.open_url('https://leafground.com/list.xhtml')
-    # locator = (By.XPATH, '//*[@id="j_idt88_content"]/div')
-    # eles = base.location_elements(By.XPATH, '//*[@id="j_idt88_content"]/div')
-    # for i in eles:
-    #     i.click()
-    #     sleep(1)
-
-    # base.open_url('https://leafground.com/alert.xhtml')
-    # # driver.find_element(By.XPATH, '//*[@id="j_idt88:j_idt93"]/span[2]').click()
-    # sleep(2)
-
-    # # base.location_element(By.XPATH, '//*[@id="j_idt88:j_idt93"]/span[2]').click()
-    # locator = (By.XPATH, '//*[@id="j_idt88:j_idt93"]/span[2]')
-    # base.click(locator)
-
-    # base.open_url("https://leafground.com/input.xhtml")
-    # local = (By.ID, "j_idt88:j_idt101")
-    # base.send_keys(local, "第一行")
-    # base.enter()
-    # base.send_keys(local, "第二行")
-    # base.clear(local)
-    # base.right_click(local)
-    # base.screenshots("多行文本")
-
-    sleep(3)
+    def assert_element_value_not_empty(self, locator: tuple):
+        """断言输入框内容不为空"""
+        try:
+            value = self.location_element(*locator).get_attribute('value')
+            assert value, f'输入框内容为空：{locator}'
+            logs.info(f'输入框内容不为空：{value}')
+        except Exception as e:
+            logs.error(f'输入框内容断言失败：{e}')
+            raise
