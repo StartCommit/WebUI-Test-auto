@@ -14,13 +14,13 @@ class TestLogin:
     @allure.story('用户登录成功')  # 测试用例标签
     @allure.title('登录成功-读取yaml文件数据')  # 测试用例标题
     @pytest.mark.parametrize("data", read_yaml('login_success.yaml'))
-    def test_login_success_01(self, get_driver, data):
+    def test_login_success_01(self, not_login_driver, data):
         username, password = data
-        login_page = LoginPage(get_driver)
+        login_page = LoginPage(not_login_driver)
         login_page.login(username, password)
 
         # 断言登录结果
-        login_page.is_element_present(login_page.assert_result)
+        login_page.assert_is_element_present(login_page.assert_result)
 
     # 登录成功,读取json文件的
     @allure.story('用户登录成功')
@@ -34,15 +34,15 @@ class TestLogin:
         login_page = LoginPage(not_login_driver)
         login_page.login(username, password)
         # 添加附件,用于在测试报告中添加附件，例如日志文件，截图，通过allure.attach.file()添加，在函数内部使用，不是使用装饰器
-        allure.attach.file(
-            r'D:\Test\WEB\requirements.txt',
-            name='依赖',
-            attachment_type=allure.attachment_type.TEXT
-        )
-        # 读取文件乱码时使用with open()打开文件，并且指定编码格式
-        with open(r'D:\Test\WEB\requirements.txt', 'r', encoding='gbk') as f:
-            content = f.read()
-        allure.attach(content, name='依赖', attachment_type=allure.attachment_type.TEXT)
+        # allure.attach.file(
+        #     r'D:\Test\WEB\requirements.txt',
+        #     name='依赖',
+        #     attachment_type=allure.attachment_type.TEXT
+        # )
+        # # 读取文件乱码时使用with open()打开文件，并且指定编码格式
+        # with open(r'D:\Test\WEB\requirements.txt', 'r', encoding='utf-16') as f:
+        #     content = f.read()
+        # allure.attach(content, name='依赖', attachment_type=allure.attachment_type.TEXT)
         # 断言登录结果
         login_page.assert_is_element_present(login_page.assert_result)
 
@@ -50,13 +50,13 @@ class TestLogin:
     @allure.story('用户登录成功')
     @allure.title('登录成功-读取xlsx文件数据')
     @pytest.mark.parametrize("data", ExcelDataReader('login_testdata.xlsx').read_multiple_rows())
-    def test_login_success_03(self, get_driver, data):
+    def test_login_success_03(self, not_login_driver, data):
         username, password = data
-        login_page = LoginPage(get_driver)
+        login_page = LoginPage(not_login_driver)
         login_page.login(username, password)
 
         # 断言登录结果
-        login_page.is_element_present(login_page.assert_result)
+        login_page.assert_is_element_present(login_page.assert_result)
 
     # 登录失败,读取json文件的
     @allure.story('用户登录失败')
