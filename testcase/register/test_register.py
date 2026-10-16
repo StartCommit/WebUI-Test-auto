@@ -5,7 +5,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from pageObject.register_page.register_page import RegisterPage
 from util_tools.handle_data.readYaml import read_yaml
 
-
+@pytest.mark.run(order=1)
 @allure.feature("注册模块")
 class TestRegister:
 
