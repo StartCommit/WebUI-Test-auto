@@ -1,5 +1,6 @@
-import os.path
+import os
 from openpyxl import load_workbook
+from config.setting import FILE_PATH
 from util_tools.logs_util.recordlog import logs
 
 
@@ -9,13 +10,17 @@ class ExcelDataReader:
     """
 
     def __init__(self, file_path):
+        # 不是绝对路径，就拼到 data 目录下
+        if not os.path.isabs(file_path):
+            file_path = os.path.join(FILE_PATH['data'], file_path)
+
         self.file_path = file_path
         abspath = os.path.abspath(self.file_path)
 
         if not os.path.exists(abspath):
             raise FileNotFoundError(f'文件不存在：{abspath}')
 
-        # read_only：控制工作簿是否以制度模式打开，如果为True，工作簿以只读模式打开，不允许对工作簿进行修改
+        # read_only：控制工作簿是否以只读模式打开，如果为True，工作簿以只读模式打开，不允许对工作簿进行修改
         self.workbook = load_workbook(self.file_path, read_only=False)
 
     def read_entire_row(self, sheet_name='Sheet1', row_index=1):
