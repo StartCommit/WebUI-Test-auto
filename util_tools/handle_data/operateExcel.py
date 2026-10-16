@@ -45,7 +45,8 @@ class ExcelDataReader:
             sheet = self.workbook[sheet_name]
             max_col = sheet.max_column  # 读取最大列数
             for row in sheet.iter_rows(min_row=2, max_row=sheet.max_row, min_col=1, max_col=max_col):
-                row_data = [cell.value for cell in row]
+                # operateExcel.py 的 read_multiple_rows
+                row_data = [cell.value if cell.value is not None else '' for cell in row]
                 all_rows_data.append(row_data)
             return all_rows_data
         except Exception as e:
