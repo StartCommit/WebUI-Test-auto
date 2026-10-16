@@ -1,0 +1,22 @@
+<environment>
+    <parameter>
+        <key>Browser</key>
+        <value>Chrome</value>
+    </parameter>
+    <parameter>
+        <key>System</key>
+        <value>Windows 11</value>
+    </parameter>
+    <parameter>
+        <key>Python version</key>
+        <value>3.10</value>
+    </parameter>
+    <parameter>
+        <key>项目地址</key>
+        <value>http://localhost/ecshop/</value>
+    </parameter>
+    <parameter>
+        <key>测试负责人</key>
+        <value>工程师：李XX</value>
+    </parameter>
+</environment>
