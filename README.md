@@ -26,7 +26,7 @@ WebUI-Test-auto/
 │   ├── flow_page/   # 购物车结算页
 │   ├── search_page/ # 购物车搜索页
 │   ├── other/       # 文件上传等其他页面
-│   └── conftest.py  # pytest 局部fixture 和钩子
+│   └── conftest.py  # pytest 局部 fixture 和钩子
 ├── report/          # 测试报告存放处
 ├── screenshot/      # 图片存放位置
 ├── testcase/        # 测试用例
