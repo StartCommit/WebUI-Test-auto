@@ -1,5 +1,4 @@
 from pageObject.other.file_upload_page import FileUploadPage
-
 import allure
 
 
