@@ -5,6 +5,7 @@ import pytest
 from config.setting import is_send_ding
 from util_tools.connectMysql import ConnectMysql
 from util_tools.dingRebot import send_dd_msg
+from util_tools.handle_data.readYaml import read_yaml
 from util_tools.logs_util.recordlog import logs
 
 
@@ -20,9 +21,13 @@ def data_clearing():
         return
 
     yield
+
     logs.info('正在清理测试数据')
     try:
-        conn.delete('ecs_users', "user_name = 'lisi1234'", must_affect=False)
+        # 从 yaml 里读出所有注册用的用户名，逐个清理
+        for data in read_yaml('register_success.yaml'):
+            user_name = data[0]           # yaml 每行第一个字段是用户名
+            conn.delete('ecs_users', f"user_name = '{user_name}'", must_affect=False)
     except Exception as e:
         logs.error(f'数据清理失败：{e}')
     finally:
