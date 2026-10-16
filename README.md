@@ -25,15 +25,15 @@ WebUI-Test-auto/
 │   ├── register_page/ # 注册页
 │   ├── flow_page/   # 购物车结算页
 │   ├── search_page/ # 购物车搜索页
-│   ├── other/       # 文件上传等其他页面
-│   └── conftest.py  # pytest 局部 fixture 和钩子
+│   └── other/       # 文件上传等其他页面
 ├── report/          # 测试报告存放处
 ├── screenshot/      # 图片存放位置
 ├── testcase/        # 测试用例
 │   ├── login/
 │   ├── register/
 │   ├── flow/
-│   └── other/
+│   ├── other/
+│   └── conftest.py  # pytest 局部 fixture 和钩子
 ├── util_tools/      # 工具类
 │   ├── basePage.py  # 基础页面类，封装通用操作
 │   ├── connectMysql.py # 数据库操作
