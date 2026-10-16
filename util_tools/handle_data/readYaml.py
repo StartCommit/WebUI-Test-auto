@@ -1,14 +1,20 @@
+import os
 import yaml
+from config.setting import FILE_PATH
 from util_tools.logs_util.recordlog import logs
 
 
 def read_yaml(file_path):
     """
     读取yaml文件的数据
-    :param file_path: yaml文件路径
+    :param file_path: 文件名（如 'register_success.yaml'）或绝对路径
     :return: 返回列表类型，列表中每个元素为元组数据，如：[("lisi", "dongli1314"), ("lisi", "dongli1314")]
     """
     try:
+        # 不是绝对路径，就拼到 data 目录下
+        if not os.path.isabs(file_path):
+            file_path = os.path.join(FILE_PATH['data'], file_path)
+
         data_list_tuple = []
         with open(file_path, encoding="utf-8") as file:
             data = yaml.load(file, Loader=yaml.FullLoader)
