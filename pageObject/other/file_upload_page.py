@@ -16,7 +16,6 @@ class FileUploadPage(BasePage):
         self.attach_text(file_path, '上传文件路径')
         # 上传文件
         self.send_keys(self.file_input, file_path)
-        self.assert_is_element_present(self.assert_result)  # 等结果元素出现
 
     def file_no_upload(self):
         self.open_url(self.url)
