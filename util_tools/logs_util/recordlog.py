@@ -56,9 +56,3 @@ class RecordLog():
 
 rec = RecordLog()
 logs = rec.output_logging()
-
-# logs.info("这是info级别日志")
-# logs.error("这是error级别日志")
-# logs.warning("这是warning级别日志")
-# logs.debug("这是debug级别日志")
-# logs.critical("这是critical级别日志")
