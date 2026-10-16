@@ -57,7 +57,7 @@ def get_driver():
 def login_driver(get_driver):
     driver = get_driver
     login_page = LoginPage(driver)
-    login_page.login("admin", "admin1314")
+    login_page.login("admin1", "admin1314")
     # 等顶部出现"用户中心"链接，说明登录已完成、页面已跳转
     WebDriverWait(driver, 5).until(
         EC.presence_of_element_located((By.LINK_TEXT, "用户中心"))
