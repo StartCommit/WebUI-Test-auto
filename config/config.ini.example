@@ -1,0 +1,15 @@
+[HOST]
+host = http://localhost/ecshop
+
+[MYSQL]
+host: 127.0.0.1
+port: 3306
+user: root
+password:
+database: ecshop
+
+[DINGTALK]
+# 钉钉机器人密钥,请自行获取
+secret = your_secret
+# 机器人中获取的webhook，请自行获取
+webhook = your_webhook
