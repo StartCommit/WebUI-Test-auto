@@ -72,6 +72,13 @@ class BasePage(object):
         """刷新当前页面"""
         self.__driver.refresh()
 
+    def scroll_to_button(self):
+        """
+        使用JavaScript滚动到页面底部
+        :return:
+        """
+        self.__driver.execute_script("window.scrollTo(0, document.body.scrollHeight)")
+
     def get_tag_text(self, locator: tuple):
         """获取标签的文本"""
         try:
@@ -206,6 +213,22 @@ class BasePage(object):
             element = self.location_element(*locator)
             element.send_keys(data)
             logs.info(f"元素被输入内容：{locator},输入的内容是：{data}")
+        except NoSuchElementException as e:
+            logs.error(f"元素定位失败：{e}")
+            raise e
+
+    def send_keys_actions(self, locator: tuple, data):
+        """
+        模拟键盘的输入操作
+        :param locator: （tuple）元素定位信息.等于（By.ID,'j_idt88:j_idt93'）
+        :param data: 输入的数据
+        :return:
+        """
+        try:
+            element = self.location_element(*locator)
+            ActionChains(self.__driver).move_to_element(element).click().send_keys(data).perform()
+            logs.info(f"元素被输入内容：{locator},输入的内容是：{data}")
+            return element
         except NoSuchElementException as e:
             logs.error(f"元素定位失败：{e}")
             raise e
@@ -472,12 +495,45 @@ class BasePage(object):
         assert expected_title in self.__driver.title, '标题不匹配'
 
 
-    def assert_element_value_not_empty(self, locator: tuple):
-        """断言输入框内容不为空"""
+    # def assert_element_value_not_empty(self, locator: tuple):
+    #     """断言输入框内容不为空"""
+    #     try:
+    #         value = self.location_element(*locator).get_attribute('value')
+    #         assert value, f'输入框内容为空：{locator}'
+    #         logs.info(f'输入框内容不为空：{value}')
+    #     except Exception as e:
+    #         logs.error(f'输入框内容断言失败：{e}')
+    #         raise
+
+    def get_element_text_content(self, locator: tuple) -> str:
+        """
+        通用获取元素内容（支持普通输入框 input/textarea 以及 富文本框 div）
+        :param locator: 元素定位
+        :return: 去除首尾空格后的文本内容
+        """
         try:
-            value = self.location_element(*locator).get_attribute('value')
-            assert value, f'输入框内容为空：{locator}'
-            logs.info(f'输入框内容不为空：{value}')
+            element = self.location_element(*locator)
+            # 1. 优先尝试获取 value 属性（针对 input, textarea）
+            value = element.get_attribute('value')
+            if value is not None:
+                return str(value).strip()
+
+            # 2. 尝试获取 textContent 属性（针对 div 富文本框）
+            text_content = element.get_attribute('textContent')
+            if text_content is not None:
+                return str(text_content).strip()
+
+            # 3. 兜底使用 text 属性
+            return element.text.strip()
         except Exception as e:
-            logs.error(f'输入框内容断言失败：{e}')
-            raise
+            logs.error(f"获取元素内容失败：{e}")
+            return ""
+
+    def assert_element_not_empty(self, locator: tuple):
+        """
+        通用断言：元素内容不为空（支持输入框 input/textarea 和 富文本框 div）
+        :param locator: 元素定位
+        """
+        content = self.get_element_text_content(locator)
+        assert content != '', f'元素内容为空，断言失败：{locator}'
+        logs.info(f'元素内容不为空，实际内容为：{content}')
