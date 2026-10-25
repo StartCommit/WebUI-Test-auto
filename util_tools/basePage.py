@@ -2,6 +2,7 @@ import os
 import sys
 from pathlib import Path
 import allure
+import time
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from time import sleep
@@ -9,12 +10,12 @@ from datetime import datetime
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as ec
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.chrome.options import Options
 from config import setting
 from util_tools.logs_util.recordlog import logs
-from selenium.common import NoSuchElementException, TimeoutException, NoSuchWindowException, NoSuchFrameException
+from selenium.common import NoSuchElementException, TimeoutException, ElementClickInterceptedException,NoSuchWindowException, NoSuchFrameException
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 import pytesseract
@@ -28,6 +29,10 @@ class BasePage(object):
     封装浏览器的一些操作，对象webdriver里面的一些方法进行二次开发
     此类封装所有的操作，所有页面继承该类
     """
+
+    @property
+    def driver(self):
+        return self.__driver
 
     def __init__(self, driver):
         # 浏览器对象初始化
@@ -44,29 +49,9 @@ class BasePage(object):
         """浏览器全屏"""
         self.__driver.fullscreen_window()
 
-    # def screenshot(self):
-    #     """截图"""
-    #     self.__driver.get_screenshot_as_png()
-
-    def open_url(self, url):
-        """打开指定url"""
-        if url.startswith("http") or url.startswith("https"):
-            logs.info(f"打开页面：{url}")
-            self.__driver.get(url)
-        else:
-            new_url = self.conf.get_host('host') + url
-            logs.info(f"打开页面：{new_url}")
-            self.__driver.get(new_url)
-
-    @property
-    def current_url(self):
-        """获取当前页面的url"""
-        return self.__driver.current_url
-
-    @property
-    def title(self):
-        """获取当前页面的标题"""
-        return self.__driver.title
+    def screenshot(self):
+        """截图"""
+        self.__driver.get_screenshot_as_png()
 
     def refresh(self):
         """刷新当前页面"""
@@ -79,6 +64,26 @@ class BasePage(object):
         """
         self.__driver.execute_script("window.scrollTo(0, document.body.scrollHeight)")
 
+    @property
+    def current_url(self):
+        """获取当前页面的url"""
+        return self.__driver.current_url
+
+    @property
+    def title(self):
+        """获取当前页面的标题"""
+        return self.__driver.title
+
+    def open_url(self, url):
+        """打开指定url"""
+        if url.startswith("http") or url.startswith("https"):
+            logs.info(f"打开页面：{url}")
+            self.__driver.get(url)
+        else:
+            new_url = self.conf.get_host('host') + url
+            logs.info(f"打开页面：{new_url}")
+            self.__driver.get(new_url)
+
     def get_tag_text(self, locator: tuple):
         """获取标签的文本"""
         try:
@@ -89,49 +94,86 @@ class BasePage(object):
             logs.error(f"获取标签的文本失败：{str(e)}")
             return ''
 
-    def get_element_value(self, locator: tuple):
-        """获取输入框/文本域的内容"""
-        try:
-            value = self.location_element(*locator).get_attribute('value')
-            logs.info(f"获取输入框内容：{value}")
-            return value
-        except Exception as e:
-            logs.error(f"获取输入框内容失败：{str(e)}")
-            return ''
-
     @property
     def switch_to(self):
         """切换switch_to"""
         return self.__driver.switch_to
 
-    def iframe(self, frame):
-        """切换iframe内联框架"""
-        try:
-            self.switch_to.frame(frame)
-            logs.info(f"切换iframe内联框架：{frame}")
-        except NoSuchFrameException:
-            logs.error(f"未找到iframe内联框架：{frame}")
-            raise
+    # def iframe(self, frame):
+    #     """切换iframe内联框架"""
+    #     try:
+    #         self.switch_to.frame(frame)
+    #         logs.info(f"切换iframe内联框架：{frame}")
+    #     except NoSuchFrameException:
+    #         logs.error(f"未找到iframe内联框架：{frame}")
+    #         raise
 
-    def switch_to_new_tab(self):
-        """浏览器打开新的标签页，切换窗口句柄"""
+    # def switch_to_new_tab(self):
+    #     """浏览器打开新的标签页，切换窗口句柄"""
+    #     try:
+    #         original_windows = self.__driver.window_handles[0]  # 获取当前窗口句柄作为原始窗口
+    #         all_window = self.__driver.window_handles  # 获取所有窗口句柄列表
+    #         new_window = None
+    #         for window in all_window:
+    #             if window != original_windows:  # 找到不等于原始窗口句柄的新窗口句柄
+    #                 new_window = window
+    #                 break
+    #         if new_window:
+    #             self.__driver.switch_to.window(new_window)  # 切换到新窗口，以便于在新窗口上执行后续操作
+    #             logs.info('成功切换到新标签页')
+    #         else:
+    #             logs.info('没有发现新标签页，继续在当前页面执行')
+    #     except Exception as e:
+    #         logs.error(f"切换新标签页失败：{e}")
+
+    def switch_to_new_tab(self, old_windows, timeout=5):
+        """等待新标签页出现并切换"""
+        driver = self.__driver
+
         try:
-            original_windows = self.__driver.window_handles[0]  # 获取当前窗口句柄作为原始窗口
-            all_window = self.__driver.window_handles  # 获取所有窗口句柄列表
-            new_window = None
-            for window in all_window:
-                if window != original_windows:  # 找到不等于原始窗口句柄的新窗口句柄
-                    new_window = window
-                    break
-            if new_window:
-                self.__driver.switch_to.window(new_window)  # 切换到新窗口，以便于在新窗口上执行后续操作
-                logs.info('成功切换到新标签页')
+            WebDriverWait(driver, timeout).until(
+                lambda d: bool(set(d.window_handles) - set(old_windows))
+            )
+
+            new_windows = set(driver.window_handles) - set(old_windows)
+            new_window = next(iter(new_windows))
+
+            driver.switch_to.window(new_window)
+            logs.info(f'成功切换到新标签页：{new_window}')
+            return True
+
         except TimeoutException:
-            logs.error('等待打开新标签页超时')
-        except NoSuchWindowException:
-            logs.error('未找到新标签页句柄')
+            logs.error(f'等待新标签页超时：{timeout} 秒')
+            return False
+
         except Exception as e:
-            logs.error(f"切换新标签页失败：{e}")
+            logs.error(f'切换新标签页失败：{e}')
+            return False
+
+    def switch_to_tab_by_index(self, index):
+        """
+        通过索引切换新标签页
+        :param index: 新标签页的索引,从0开始
+        :return:
+        """
+        try:
+            all_window = self.__driver.window_handles
+            if 0 <= index < len(all_window):
+                self.switch_to.window(all_window[index])
+                logs.info(f"成功切换到第{index + 1}个标签页")
+            else:
+                logs.error(f"指定的窗口索引超出范围：{index}")
+        except Exception as e:
+            logs.error(f"切换新标签页失败：{str(e)}")
+
+    def iframe(self, locator):
+        """切换iframe内联框架，locator 是 (By, value) 元组"""
+        try:
+            self.__wait.until(EC.frame_to_be_available_and_switch_to_it(locator))
+            logs.info(f"切换iframe内联框架：{locator}")
+        except Exception:
+            logs.error(f"未找到iframe内联框架：{locator}")
+            raise
 
     def exit_iframe(self):
         """退出iframe内联框架"""
@@ -141,7 +183,7 @@ class BasePage(object):
     def alert(self):
         """切换alert弹窗处理"""
         # return self.switch_to.alert
-        return self.__wait.until(ec.alert_is_present())  # 等待alert弹窗出现,存在就返回Alert对象，不存在就返回False
+        return self.__wait.until(EC.alert_is_present())  # 等待alert弹窗出现,存在就返回Alert对象，不存在就返回False
 
     def alert_confirm(self):
         """alert弹窗点击确定操作"""
@@ -159,7 +201,7 @@ class BasePage(object):
         :return
         """
         try:
-            element = self.__wait.until(ec.presence_of_element_located((by, value)))
+            element = self.__wait.until(EC.presence_of_element_located((by, value)))
             logs.info(f"找到元素：{by}={value}")
             return element
         except Exception as e:
@@ -174,7 +216,7 @@ class BasePage(object):
         :return
         """
         try:
-            self.__wait.until(ec.presence_of_all_elements_located((by, value)))
+            self.__wait.until(EC.presence_of_all_elements_located((by, value)))
             elements = self.__driver.find_elements(by, value)
             logs.info(f"找到元素列表：{by}={value}")
             return elements
@@ -182,25 +224,56 @@ class BasePage(object):
             logs.error(f"未找到元素列表：{by}={value}")
             raise e
 
-    def click(self, locator: tuple, force=False):
+    def visibility_of_element_located(self, by, value):
         """
-        封装点击操作
-        :param locator: （tuple）元素定位信息.等于（By.ID,'j_idt88:j_idt93'）
-        :param force: 可选参数，强制点击，默认为False
+        等待元素可见性
+        :param by:
+        :param value:
         :return:
         """
         try:
+            element = self.__wait.until(EC.visibility_of_element_located((by, value)))
+            logs.info(f"找到元素：{by} = {value}")
+            return element
+        except Exception as e:
+            logs.error(f"在设定时间内未找到元素：{by} = {value}")
+            raise e
+
+    def click(self, locator: tuple, force=False):
+        """
+        封装点击操作
+        """
+        try:
             element = self.location_element(*locator)
-            if not force:
+
+            # 如果你手动传了 force，直接用 JS
+            if force:
                 self.__driver.execute_script("arguments[0].click();", element)
-            else:
-                self.__driver.execute_script(
-                    "arguments[0].click({force:true});", element
-                )
-            logs.info(f"元素点击：{locator}")
+                logs.info(f"元素点击(JS强点)：{locator}")
+                return
+
+            # 没传 force，先尝试普通点击
+            try:
+                element.click()
+                logs.info(f"元素点击：{locator}")
+            except ElementClickInterceptedException:
+                # 如果被遮挡了，自动转成 JS 点击，并记录一条警告
+                logs.warning(f"元素被遮挡，自动切换为JS点击：{locator}")
+                self.__driver.execute_script("arguments[0].click();", element)
+                logs.info(f"元素点击(JS兜底)：{locator}")
+
         except NoSuchElementException as e:
             logs.error(f"元素定位失败：{locator}")
             raise e
+
+    def click_actions(self, locator: tuple):
+        """
+        封装模拟鼠标点击操作
+        :param locator: （tuple）定位元素信息，等于(By.ID,'j_idt88:j_idt93')
+        :return:
+        """
+        element = self.visibility_of_element_located(*locator)
+        ActionChains(self.__driver).click(element).perform()
 
     def send_keys(self, locator: tuple, data):
         """
@@ -231,6 +304,76 @@ class BasePage(object):
             return element
         except NoSuchElementException as e:
             logs.error(f"元素定位失败：{e}")
+            raise e
+
+    def select_by_index(self, locator: tuple, index: int):
+        """通过索引选择下拉框选项"""
+        try:
+            element = self.location_element(*locator)
+            Select(element).select_by_index(index)
+            logs.info(f"下拉框选择（索引）：{locator} -> {index}")
+        except Exception as e:
+            logs.error(f"下拉框选择失败：{locator} -> {index}")
+            raise e
+
+    def select_by_value(self, locator: tuple, value: str):
+        """通过 value 属性选择下拉框选项"""
+        try:
+            element = self.location_element(*locator)
+            Select(element).select_by_value(value)
+            logs.info(f"下拉框选择（value）：{locator} -> {value}")
+        except Exception as e:
+            logs.error(f"下拉框选择失败：{locator} -> {value}")
+            raise e
+
+    def select_by_text(self, locator: tuple, text: str):
+        """通过可见文本选择下拉框选项"""
+        try:
+            element = self.location_element(*locator)
+            Select(element).select_by_visible_text(text)
+            logs.info(f"下拉框选择（文本）：{locator} -> {text}")
+        except Exception as e:
+            logs.error(f"下拉框选择失败：{locator} -> {text}")
+            raise e
+
+    def deselect_by_index(self, locator: tuple, index: int):
+        """通过索引取消选择（多选下拉框）"""
+        try:
+            element = self.location_element(*locator)
+            Select(element).deselect_by_index(index)
+            logs.info(f"下拉框取消选择（索引）：{locator} -> {index}")
+        except Exception as e:
+            logs.error(f"下拉框取消选择失败：{locator} -> {index}")
+            raise e
+
+    def deselect_by_value(self, locator: tuple, value: str):
+        """通过 value 属性取消选择（多选下拉框）"""
+        try:
+            element = self.location_element(*locator)
+            Select(element).deselect_by_value(value)
+            logs.info(f"下拉框取消选择（value）：{locator} -> {value}")
+        except Exception as e:
+            logs.error(f"下拉框取消选择失败：{locator} -> {value}")
+            raise e
+
+    def deselect_by_text(self, locator: tuple, text: str):
+        """通过可见文本取消选择（多选下拉框）"""
+        try:
+            element = self.location_element(*locator)
+            Select(element).deselect_by_visible_text(text)
+            logs.info(f"下拉框取消选择（文本）：{locator} -> {text}")
+        except Exception as e:
+            logs.error(f"下拉框取消选择失败：{locator} -> {text}")
+            raise e
+
+    def deselect_all(self, locator: tuple):
+        """取消所有选项（多选下拉框）"""
+        try:
+            element = self.location_element(*locator)
+            Select(element).deselect_all()
+            logs.info(f"下拉框取消所有选择：{locator}")
+        except Exception as e:
+            logs.error(f"下拉框取消所有选择失败：{locator}")
             raise e
 
     def enter(self):
@@ -268,6 +411,20 @@ class BasePage(object):
             logs.info(f"执行双击操作：{locator}")
         except NoSuchElementException as e:
             logs.error(f"双击失败：{e}")
+            raise e
+
+    def mouse_hover_actions(self, locator: tuple):
+        """
+        封装鼠标悬停展示内容或弹框
+        :param locator: （tuple）定位页面元素
+        :return:
+        """
+        try:
+            move_element = self.location_element(*locator)
+            ActionChains(self.__driver).move_to_element(move_element).perform()
+            logs.info('鼠标悬停')
+        except Exception as e:
+            logs.error(f"鼠标悬停出现异常：{e}")
             raise e
 
     def screenshots(self, image_name):
@@ -359,10 +516,10 @@ class BasePage(object):
         """
         captcha_element = self.location_element(*locator)
         # 截取验证码图片
-        captch_path = setting.FILE_PATH["screenshot"] + "/captcha.png"
-        captcha_element.screenshot(captch_path)
+        captcha_path = setting.FILE_PATH["screenshot"] + "/captcha.png"
+        captcha_element.screenshot(captcha_path)
         # 调用image去打开图像
-        captcha_image = Image.open(captch_path)
+        captcha_image = Image.open(captcha_path)
         try:
             # 调用pytesseract进行ocr识别
             captcha_text = pytesseract.image_to_string(captcha_image)
@@ -372,76 +529,6 @@ class BasePage(object):
             logs.error(
                 f"找不到tesseract,因为pytesseracts依赖tesseract-ocr引擎进行图像识别！"
             )
-
-    def select_by_index(self, locator: tuple, index: int):
-        """通过索引选择下拉框选项"""
-        try:
-            element = self.location_element(*locator)
-            Select(element).select_by_index(index)
-            logs.info(f"下拉框选择（索引）：{locator} -> {index}")
-        except Exception as e:
-            logs.error(f"下拉框选择失败：{locator} -> {index}")
-            raise e
-
-    def select_by_value(self, locator: tuple, value: str):
-        """通过 value 属性选择下拉框选项"""
-        try:
-            element = self.location_element(*locator)
-            Select(element).select_by_value(value)
-            logs.info(f"下拉框选择（value）：{locator} -> {value}")
-        except Exception as e:
-            logs.error(f"下拉框选择失败：{locator} -> {value}")
-            raise e
-
-    def select_by_text(self, locator: tuple, text: str):
-        """通过可见文本选择下拉框选项"""
-        try:
-            element = self.location_element(*locator)
-            Select(element).select_by_visible_text(text)
-            logs.info(f"下拉框选择（文本）：{locator} -> {text}")
-        except Exception as e:
-            logs.error(f"下拉框选择失败：{locator} -> {text}")
-            raise e
-
-    def deselect_by_index(self, locator: tuple, index: int):
-        """通过索引取消选择（多选下拉框）"""
-        try:
-            element = self.location_element(*locator)
-            Select(element).deselect_by_index(index)
-            logs.info(f"下拉框取消选择（索引）：{locator} -> {index}")
-        except Exception as e:
-            logs.error(f"下拉框取消选择失败：{locator} -> {index}")
-            raise e
-
-    def deselect_by_value(self, locator: tuple, value: str):
-        """通过 value 属性取消选择（多选下拉框）"""
-        try:
-            element = self.location_element(*locator)
-            Select(element).deselect_by_value(value)
-            logs.info(f"下拉框取消选择（value）：{locator} -> {value}")
-        except Exception as e:
-            logs.error(f"下拉框取消选择失败：{locator} -> {value}")
-            raise e
-
-    def deselect_by_text(self, locator: tuple, text: str):
-        """通过可见文本取消选择（多选下拉框）"""
-        try:
-            element = self.location_element(*locator)
-            Select(element).deselect_by_visible_text(text)
-            logs.info(f"下拉框取消选择（文本）：{locator} -> {text}")
-        except Exception as e:
-            logs.error(f"下拉框取消选择失败：{locator} -> {text}")
-            raise e
-
-    def deselect_all(self, locator: tuple):
-        """取消所有选项（多选下拉框）"""
-        try:
-            element = self.location_element(*locator)
-            Select(element).deselect_all()
-            logs.info(f"下拉框取消所有选择：{locator}")
-        except Exception as e:
-            logs.error(f"下拉框取消所有选择失败：{locator}")
-            raise e
 
     def is_selected(self, locator: tuple) -> bool:
         """判断元素是否已勾选（用于 checkbox / radio）"""
@@ -455,7 +542,7 @@ class BasePage(object):
         :return:
         """
         try:
-            self.__wait.until(ec.presence_of_element_located(locator))
+            self.__wait.until(EC.presence_of_element_located(locator))
             return True
         except TimeoutException:
             return False
@@ -472,7 +559,7 @@ class BasePage(object):
             return element
         except NoSuchElementException as e:
             logs.error(f"{locator}元素未找到")
-            raise AssertionError('元素不存在')
+            raise AssertionError(f'元素不存在{e}')
 
     def assert_element_not_visible(self, locator: tuple):
         """
@@ -481,7 +568,7 @@ class BasePage(object):
         :return:
         """
         try:
-            self.__wait.until(ec.invisibility_of_element_located(locator))
+            self.__wait.until(EC.invisibility_of_element_located(locator))
         except TimeoutException:
             logs.error("元素可见，断言失败")
             raise AssertionError("元素可见")
@@ -494,6 +581,23 @@ class BasePage(object):
         """
         assert expected_title in self.__driver.title, '标题不匹配'
 
+    def assert_element_to_be_clickable(self, locator: tuple):
+        """
+        断言元素是否可被点击操作
+        :param locator: （tuple）元素定位表达式
+        :return:
+        """
+        try:
+            element = self.__wait.until(
+                EC.element_to_be_clickable(locator)
+            )
+            # 执行断言或其他操作
+            assert element.is_enabled(), "元素未启用交互"
+            logs.info('断言结果：元素是可点击的，并且可以进行交互')
+            # 例如，点击元素
+            element.click()
+        except Exception as e:
+            logs.error(f"发生错误: {e}")
 
     # def assert_element_value_not_empty(self, locator: tuple):
     #     """断言输入框内容不为空"""
@@ -537,3 +641,13 @@ class BasePage(object):
         content = self.get_element_text_content(locator)
         assert content != '', f'元素内容为空，断言失败：{locator}'
         logs.info(f'元素内容不为空，实际内容为：{content}')
+
+    def get_element_value(self, locator: tuple):
+        """获取输入框/文本域的内容"""
+        try:
+            value = self.location_element(*locator).get_attribute('value')
+            logs.info(f"获取输入框内容：{value}")
+            return value
+        except Exception as e:
+            logs.error(f"获取输入框内容失败：{str(e)}")
+            return ''
