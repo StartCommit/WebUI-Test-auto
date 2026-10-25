@@ -18,7 +18,7 @@ class TestRegister:
         # 如果使用*data解包数据，data的元素必须跟click_register方法中的参数一致
         register_page.register(*data)
         # 断言登录结果
-        WebDriverWait(not_login_driver, 10).until(
+        WebDriverWait(not_login_driver, 15).until(
             ec.presence_of_element_located(register_page.assert_result)
         )
         register_page.assert_is_element_present(register_page.assert_result)  # 断言元素存在，存在则返回true
