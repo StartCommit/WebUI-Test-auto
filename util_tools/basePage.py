@@ -84,6 +84,21 @@ class BasePage(object):
             logs.info(f"打开页面：{new_url}")
             self.__driver.get(new_url)
 
+    def wait_for_url(self, url_part, timeout=10):
+        """
+        封装：等待当前页面的 URL 包含指定的字符串
+        :param url_part: URL 包含的片段，例如 'step=done'
+        :param timeout: 超时时间，默认10秒
+        """
+        try:
+            WebDriverWait(self.__driver, timeout).until(
+                EC.url_contains(url_part)
+            )
+            logs.info(f"页面已成功跳转，当前URL包含：{url_part}")
+        except TimeoutException:
+            logs.error(f"等待页面跳转超时：URL未包含 {url_part}")
+            raise
+
     def get_tag_text(self, locator: tuple):
         """获取标签的文本"""
         try:
