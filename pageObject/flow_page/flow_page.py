@@ -1,7 +1,8 @@
 import allure
 from selenium.webdriver.common.by import By
 from util_tools.basePage import BasePage
-
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 # 购物车页面
 class FlowPage(BasePage):
@@ -82,6 +83,8 @@ class FlowPage(BasePage):
         self.click(self.shipping_way)
         self.click(self.payment_way)
         self.click(self.submit_order)
+        self.wait_for_url('step=done')
+
 
     @allure.step("购物车结算流程")
     def flow_success(self):
