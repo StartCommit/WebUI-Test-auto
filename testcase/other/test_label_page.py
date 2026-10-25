@@ -10,4 +10,5 @@ class TestLabelPage:
         label_page = LabelPage(not_login_driver)
         label_page.open_new_table_operate()
         # 断言输入框是否有数据输入
-        label_page.assert_element_value_not_empty(label_page.message_input)
+        label_page.assert_element_not_empty(label_page.message_input)
+        # label_page.assert_element_value_not_empty(label_page.message_input)
